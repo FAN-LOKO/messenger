@@ -233,19 +233,99 @@
       <!-- RU: Экран ленты постов. -->
       <!-- EN: Feed screen. -->
       <section class="view" id="view-feed">
-        <div class="hero-head">
-          <div>
-            <div class="eyebrow">Feed mode</div>
-            <h1>Лента сообщества</h1>
-            <p class="muted">Отдельный social layer для публикаций, premium-постов и контента по unlock-модели.</p>
-          </div>
-        </div>
+  <!-- RU: Экран отдельной ленты сообщества с постами и закрытым контентом. -->
+  <!-- EN: Dedicated community feed screen with posts and locked content. -->
+  <div class="hero-head">
+    <div>
+      <div class="eyebrow">Community feed</div>
+      <h1>Лента сообщества</h1>
+      <p class="muted">Публикации авторов, материалы круга, закрытые посты, комментарии и поддержка участников.</p>
+    </div>
+  </div>
 
-        <article class="feature-card card glass">
-          <h3>Feed scaffold</h3>
-          <p class="muted">Следующим этапом добавим карточки постов, locked content и author cards.</p>
-        </article>
-      </section>
+  <div class="feed-shell">
+    <!-- RU: Левая колонка с фильтрами и навигацией по типам публикаций. -->
+    <!-- EN: Left column with filters and publication type navigation. -->
+    <aside class="feed-side card glass">
+      <div class="panel-head">
+        <div>
+          <h3>Разделы</h3>
+          <div class="tiny muted">Настройка ленты под сценарий просмотра</div>
+        </div>
+      </div>
+
+      <div class="filter-stack">
+        <button class="chip active">Все публикации</button>
+        <button class="chip">По подписке</button>
+        <button class="chip">Изображения</button>
+        <button class="chip">Голосовые</button>
+        <button class="chip">Материалы круга</button>
+      </div>
+    </aside>
+
+    <!-- RU: Основной поток карточек публикаций. -->
+    <!-- EN: Main stream of publication cards. -->
+    <div class="feed-stream">
+      <article class="post-card card glass soft-glow">
+        <div class="post-head">
+          <strong>Алтанай</strong>
+          <span class="post-badge">по подписке</span>
+        </div>
+        <h3>Ритуал у воды — закрытая публикация</h3>
+        <p class="muted">Материал открыт участникам с активным статусом. Внутри — серия изображений, голосовое сопровождение и комментарии автора.</p>
+        <div class="post-media"></div>
+        <div class="post-actions">
+          <span>❤️ 42</span>
+          <span>💬 18</span>
+          <span>🎁 7</span>
+          <span>Закрыто</span>
+        </div>
+      </article>
+
+      <article class="post-card card glass">
+        <div class="post-head">
+          <strong>Круг Байкала</strong>
+          <span class="post-badge free">открыто</span>
+        </div>
+        <h3>Открытая лента для всех участников</h3>
+        <p class="muted">Здесь участники читают публикации, обсуждают события круга и поддерживают авторов подарками и реакциями.</p>
+        <div class="post-actions">
+          <span>🔥 27</span>
+          <span>💬 12</span>
+          <span>🖼 4</span>
+        </div>
+      </article>
+
+      <article class="post-card card glass locked-post">
+        <div class="post-head">
+          <strong>Хранитель озера</strong>
+          <span class="post-badge">за токены</span>
+        </div>
+        <h3>Закрытый круг на выходные</h3>
+        <p class="muted">Участие открывается по статусу участника или после отдельного доступа. Внутри — личная встреча и закрытое обсуждение.</p>
+        <div class="post-actions">
+          <span>🎥 Встреча круга</span>
+          <span>🕒 Суббота, 20:00</span>
+        </div>
+      </article>
+
+      <article class="post-card card glass">
+        <div class="post-head">
+          <strong>Лада</strong>
+          <span class="post-badge free">автор</span>
+        </div>
+        <h3>Новые изображения для вечернего круга</h3>
+        <p class="muted">Подборка визуальных материалов для следующей встречи. Комментарии открыты для всех участников сообщества.</p>
+        <div class="post-media small-media"></div>
+        <div class="post-actions">
+          <span>🌿 15</span>
+          <span>💬 9</span>
+          <span>🎁 2</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
       <!-- RU: Экран видеозвонков. -->
       <!-- EN: Calls screen. -->
