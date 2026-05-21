@@ -1,1 +1,95 @@
+/* RU: Стили экрана кошелька, статуса участия, истории операций и монетизации. */
+/* EN: Styles for wallet screen, membership status, activity history, and monetization. */
 
+.wallet-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.wallet-panel {
+  border-radius: 24px;
+  padding: 20px;
+}
+
+.balance {
+  font-size: var(--text-lg);
+  font-weight: 800;
+  margin: 8px 0 16px;
+}
+
+.wallet-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.wallet-line:last-child {
+  border-bottom: none;
+}
+
+.wallet-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.wide-wallet {
+  grid-column: 1 / -1;
+}
+
+.monet-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.monet-card {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.wallet-history {
+  display: grid;
+  gap: 12px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--color-border);
+}
+
+.history-value {
+  font-weight: 800;
+}
+
+.history-value.plus {
+  color: #7ccf93;
+}
+
+.history-value.minus {
+  color: #d98b8b;
+}
+
+@media (max-width: 1100px) {
+  .wallet-grid,
+  .monet-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wide-wallet {
+    grid-column: auto;
+  }
+}
