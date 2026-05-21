@@ -1,5 +1,5 @@
-/* RU: Глобальная дизайн-система проекта: compact luxury-палитра, типографика и controls. */
-/* EN: Global design system: compact luxury palette, typography, and controls. */
+/* RU: Глобальная дизайн-система проекта: атмосферный Baikal-pass для цвета, глубины и controls. */
+/* EN: Global design system: atmospheric Baikal pass for color, depth, and controls. */
 
 :root,
 [data-theme="light"] {
@@ -9,23 +9,25 @@
   --text-lg: clamp(1.06rem, 1.02rem + 0.26vw, 1.22rem);
   --text-xl: clamp(1.75rem, 1.35rem + 0.82vw, 2.35rem);
 
-  --color-bg: #f4efe7;
-  --color-bg-deep: #ebe1d3;
+  --color-bg: #f3eee7;
+  --color-bg-deep: #e8ded0;
   --color-surface: #f8f4ed;
-  --color-surface-2: #f2eadf;
-  --color-panel: rgba(255, 252, 247, 0.78);
-  --color-panel-strong: rgba(255, 250, 244, 0.92);
-  --color-border: rgba(88, 68, 45, 0.10);
+  --color-surface-2: #f1e8dd;
+  --color-panel: rgba(255, 252, 247, 0.77);
+  --color-panel-strong: rgba(255, 250, 244, 0.90);
+  --color-border: rgba(84, 67, 48, 0.10);
   --color-text: #27211c;
-  --color-muted: #7b7064;
-  --color-primary: #0d5a61;
-  --color-primary-2: #4b8b92;
-  --color-accent: #bd9561;
-  --color-accent-soft: rgba(189, 149, 97, 0.11);
+  --color-muted: #7c7166;
+
+  --color-primary: #0c5b63;
+  --color-primary-2: #3d868d;
+  --color-glacier: #8fd6d2;
+  --color-accent: #cb9d60;
+  --color-accent-soft: rgba(203, 157, 96, 0.12);
 
   --shadow-sm: 0 6px 18px rgba(60, 42, 27, 0.05);
   --shadow-md: 0 14px 38px rgba(35, 25, 17, 0.11);
-  --shadow-lg: 0 22px 68px rgba(22, 15, 10, 0.14);
+  --shadow-lg: 0 24px 74px rgba(22, 15, 10, 0.15);
 
   --radius-md: 0.82rem;
   --radius-lg: 1rem;
@@ -37,23 +39,25 @@
 }
 
 [data-theme="dark"] {
-  --color-bg: #0d0b09;
-  --color-bg-deep: #17120f;
-  --color-surface: #15110f;
-  --color-surface-2: #1c1714;
-  --color-panel: rgba(24, 20, 17, 0.8);
-  --color-panel-strong: rgba(29, 24, 20, 0.93);
-  --color-border: rgba(233, 221, 203, 0.07);
-  --color-text: #ece2d5;
-  --color-muted: #a89889;
-  --color-primary: #75b9b3;
-  --color-primary-2: #2f7d84;
-  --color-accent: #d1a56d;
-  --color-accent-soft: rgba(209, 165, 109, 0.09);
+  --color-bg: #0b0a09;
+  --color-bg-deep: #14110f;
+  --color-surface: #14110f;
+  --color-surface-2: #1a1613;
+  --color-panel: rgba(21, 18, 16, 0.80);
+  --color-panel-strong: rgba(26, 22, 19, 0.93);
+  --color-border: rgba(226, 220, 210, 0.07);
+  --color-text: #eee3d7;
+  --color-muted: #ab9d8d;
+
+  --color-primary: #67b9b5;
+  --color-primary-2: #236f78;
+  --color-glacier: #9ce4dd;
+  --color-accent: #d6a76c;
+  --color-accent-soft: rgba(214, 167, 108, 0.10);
 
   --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.18);
-  --shadow-md: 0 14px 44px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 24px 90px rgba(0, 0, 0, 0.44);
+  --shadow-md: 0 14px 44px rgba(0, 0, 0, 0.32);
+  --shadow-lg: 0 28px 96px rgba(0, 0, 0, 0.48);
 }
 
 * {
@@ -74,13 +78,26 @@ html {
 body {
   font-family: var(--font-body);
   background:
-    radial-gradient(circle at top right, rgba(117, 185, 179, 0.07), transparent 22%),
-    radial-gradient(circle at bottom left, rgba(209, 165, 109, 0.05), transparent 24%),
+    radial-gradient(circle at 82% 10%, rgba(103, 185, 181, 0.10), transparent 18%),
+    radial-gradient(circle at 14% 82%, rgba(214, 167, 108, 0.06), transparent 24%),
+    radial-gradient(circle at 50% 0%, rgba(156, 228, 221, 0.06), transparent 28%),
     linear-gradient(180deg, var(--color-bg), var(--color-bg-deep));
   color: var(--color-text);
   font-size: var(--text-base);
   line-height: 1.48;
   letter-spacing: -0.012em;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 78% 14%, rgba(103,185,181,.08), transparent 16%),
+    radial-gradient(circle at 22% 88%, rgba(214,167,108,.05), transparent 20%);
+  mix-blend-mode: screen;
+  opacity: .8;
 }
 
 button,
@@ -108,7 +125,9 @@ textarea {
 }
 
 .glass {
-  background: linear-gradient(180deg, rgba(255,255,255,.022), rgba(255,255,255,.008));
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.025), rgba(255,255,255,.008)),
+    linear-gradient(135deg, rgba(103,185,181,.02), transparent 30%);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
@@ -152,10 +171,14 @@ p {
   border-radius: 12px;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,.22), transparent 35%),
+    linear-gradient(135deg, var(--color-primary), var(--color-accent));
   color: #fff;
   font-weight: 900;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.06),
+    0 8px 20px rgba(0, 0, 0, 0.14);
 }
 
 .avatar {
@@ -164,10 +187,14 @@ p {
   border-radius: 14px;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,.20), transparent 36%),
+    linear-gradient(135deg, var(--color-primary), var(--color-accent));
   color: #fff;
   font-weight: 900;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.05),
+    0 6px 18px rgba(0, 0, 0, 0.14);
 }
 
 .icon-btn {
@@ -178,7 +205,7 @@ p {
   place-items: center;
   background:
     linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.018)),
-    transparent;
+    linear-gradient(135deg, rgba(103,185,181,.03), transparent 55%);
   border: 1px solid var(--color-border);
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.04),
@@ -195,7 +222,7 @@ p {
   transform: translateY(-1px);
   background:
     linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.025)),
-    transparent;
+    linear-gradient(135deg, rgba(103,185,181,.05), transparent 55%);
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.05),
     0 8px 16px rgba(0,0,0,.08);
@@ -217,7 +244,9 @@ p {
 }
 
 .primary-btn {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-2));
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255,255,255,.16), transparent 34%),
+    linear-gradient(135deg, var(--color-primary), var(--color-primary-2));
   color: #fff;
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.08),
@@ -232,14 +261,14 @@ p {
   border: 1px solid var(--color-border);
   background:
     linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.015)),
-    transparent;
+    linear-gradient(135deg, rgba(214,167,108,.02), transparent 50%);
 }
 
 .secondary-btn:hover {
   transform: translateY(-1px);
   background:
     linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)),
-    transparent;
+    linear-gradient(135deg, rgba(214,167,108,.03), transparent 50%);
 }
 
 .primary-btn.compact,
