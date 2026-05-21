@@ -1,1 +1,7 @@
+/* RU: Стили токенов, баланса и истории операций. */
+/* EN: Styles for tokens, balance, and transaction history. */
 
+.token-badge {}
+.token-balance {}
+.token-card {}
+.token-history {}
