@@ -1,98 +1,189 @@
-/* RU: Стили экрана ленты, карточек публикаций, фильтров и медиа-блоков. */
-/* EN: Styles for feed screen, publication cards, filters, and media blocks. */
+/* RU: Лента сообщества — compact pass, ближе к мессенджерной плотности. */
+/* EN: Community feed — compact pass, closer to messenger-like density. */
 
 .feed-shell {
   display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 16px;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
 }
 
 .feed-side {
-  padding: 20px;
-  border-radius: 24px;
-  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 18px;
 }
 
 .filter-stack {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 12px;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .chip {
-  padding: 0.45rem 0.8rem;
-  border-radius: 999px;
-  background: rgba(255,255,255,.04);
-  font-size: var(--text-sm);
-  border: 1px solid var(--color-border);
-  transition: var(--transition);
+  min-height: 34px;
+  padding: 0.48rem 0.72rem;
+  border-radius: 12px;
+  text-align: left;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text);
+  border: 1px solid transparent;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.025), rgba(255,255,255,.008)),
+    rgba(255,255,255,.012);
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.chip:hover {
+  transform: translateY(-1px);
+  border-color: var(--color-border);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.012)),
+    rgba(255,255,255,.018);
 }
 
 .chip.active {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-2));
   color: #fff;
   border-color: transparent;
+  background:
+    radial-gradient(circle at 22% 20%, rgba(255,255,255,.14), transparent 34%),
+    linear-gradient(135deg, var(--color-primary), var(--color-primary-2));
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.08),
+    0 8px 16px rgba(35, 96, 98, 0.16);
 }
 
 .feed-stream {
-  display: grid;
-  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .post-card {
-  border-radius: 24px;
-  padding: 20px;
+  padding: 16px 16px 14px;
+  border-radius: 18px;
 }
 
 .post-head {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
   align-items: center;
-  margin-bottom: 10px;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.post-head strong {
+  font-size: 0.92rem;
+  line-height: 1.2;
+}
+
+.post-card h3 {
+  font-size: 1rem;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.post-card p {
+  font-size: 0.88rem;
+  line-height: 1.42;
+  margin: 0 0 10px;
+  max-width: none;
 }
 
 .post-badge {
-  padding: 0.32rem 0.7rem;
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 0.22rem 0.56rem;
   border-radius: 999px;
-  background: rgba(200,159,88,.14);
+  font-size: 0.7rem;
+  font-weight: 700;
   color: var(--color-accent);
-  font-size: var(--text-xs);
+  border: 1px solid rgba(214,167,108,.18);
+  background:
+    linear-gradient(180deg, rgba(214,167,108,.12), rgba(214,167,108,.04)),
+    transparent;
+  white-space: nowrap;
 }
 
 .post-badge.free {
-  background: rgba(109,183,178,.14);
   color: var(--color-primary);
+  border-color: rgba(103,185,181,.18);
+  background:
+    linear-gradient(180deg, rgba(103,185,181,.12), rgba(103,185,181,.04)),
+    transparent;
 }
 
 .post-media {
+  width: 100%;
   height: 180px;
-  border-radius: 20px;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(255,255,255,.04);
   background:
-    linear-gradient(135deg, rgba(109,183,178,.22), rgba(200,159,88,.12)),
-    radial-gradient(circle at top right, rgba(255,255,255,.12), transparent 30%);
-  margin-top: 14px;
+    linear-gradient(135deg, rgba(103,185,181,.16), rgba(214,167,108,.08)),
+    radial-gradient(circle at 70% 30%, rgba(255,255,255,.08), transparent 30%),
+    rgba(255,255,255,.02);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
 }
 
-.post-media.small-media {
-  height: 120px;
+.small-media {
+  height: 132px;
 }
 
 .post-actions {
   display: flex;
-  gap: 16px;
   flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: center;
+  font-size: 0.76rem;
   color: var(--color-muted);
-  margin-top: 14px;
 }
 
 .locked-post {
-  border-style: dashed;
+  border-color: rgba(214,167,108,.12);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.024), rgba(255,255,255,.008)),
+    linear-gradient(135deg, rgba(214,167,108,.035), transparent 55%);
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 980px) {
   .feed-shell {
     grid-template-columns: 1fr;
+  }
+
+  .feed-side {
+    padding: 14px;
+  }
+
+  .filter-stack {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .chip {
+    width: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .post-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .post-media {
+    height: 150px;
+  }
+
+  .small-media {
+    height: 116px;
   }
 }
