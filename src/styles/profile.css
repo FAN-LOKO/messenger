@@ -1,1 +1,71 @@
+/* RU: Стили экрана профиля, статуса участника, прав и настроек. */
+/* EN: Styles for profile screen, member status, permissions, and settings. */
 
+.profile-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 16px;
+}
+
+.profile-panel,
+.profile-detail {
+  border-radius: 24px;
+  padding: 20px;
+}
+
+.profile-main {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.avatar.big {
+  width: 76px;
+  height: 76px;
+  font-size: 1.2rem;
+}
+
+.wide-profile {
+  grid-column: 1 / -1;
+}
+
+.profile-identity {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.identity-card,
+.setting-card {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--color-border);
+}
+
+.identity-card {
+  display: grid;
+  gap: 8px;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.setting-card {
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .profile-layout,
+  .profile-identity,
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wide-profile {
+    grid-column: auto;
+  }
+}
