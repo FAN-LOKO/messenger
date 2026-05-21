@@ -330,19 +330,134 @@
       <!-- RU: Экран видеозвонков. -->
       <!-- EN: Calls screen. -->
       <section class="view" id="view-calls">
-        <div class="hero-head">
-          <div>
-            <div class="eyebrow">Calls mode</div>
-            <h1>Видеозвонки через Jitsi</h1>
-            <p class="muted">1:1 и групповые звонки для admin и premium-пользователей.</p>
-          </div>
+  <!-- RU: Экран личных и групповых встреч внутри платформы. -->
+  <!-- EN: Screen for private and group meetings inside the platform. -->
+  <div class="hero-head">
+    <div>
+      <div class="eyebrow">Meetings</div>
+      <h1>Личные и групповые звонки</h1>
+      <p class="muted">Пространство для личных встреч, закрытых кругов и совместных бесед внутри сообщества.</p>
+    </div>
+  </div>
+
+  <div class="calls-grid">
+    <!-- RU: Блок подготовки ко входу во встречу. -->
+    <!-- EN: Join preparation block before entering a meeting. -->
+    <article class="call-panel card glass soft-glow">
+      <div class="panel-head">
+        <div>
+          <h3>Подготовка ко входу</h3>
+          <div class="tiny muted">Проверьте камеру, звук и формат участия</div>
+        </div>
+      </div>
+
+      <div class="call-preview">
+        <div class="call-stage">Ваше пространство встречи</div>
+        <div class="call-options">
+          <span class="chip active">Камера</span>
+          <span class="chip active">Микрофон</span>
+          <span class="chip">Фон</span>
+        </div>
+      </div>
+
+      <div class="call-actions">
+        <button class="primary-btn">Войти во встречу</button>
+        <button class="secondary-btn">Запланировать</button>
+      </div>
+    </article>
+
+    <!-- RU: Блок с доступом и форматами участия. -->
+    <!-- EN: Access rules and participation formats block. -->
+    <article class="call-panel card glass">
+      <div class="panel-head">
+        <div>
+          <h3>Форматы доступа</h3>
+          <div class="tiny muted">Участие зависит от статуса и роли внутри платформы</div>
+        </div>
+      </div>
+
+      <div class="access-list">
+        <div class="access-row">
+          <span>Личные встречи</span>
+          <strong>доступно участникам с расширенным статусом</strong>
+        </div>
+        <div class="access-row">
+          <span>Закрытые круги</span>
+          <strong>по приглашению и внутреннему статусу</strong>
+        </div>
+        <div class="access-row">
+          <span>Групповые беседы</span>
+          <strong>для ведущих и приглашённых участников</strong>
+        </div>
+      </div>
+    </article>
+
+    <!-- RU: Блок сценариев звонков. -->
+    <!-- EN: Meeting scenario cards block. -->
+    <article class="call-panel card glass wide">
+      <div class="panel-head">
+        <div>
+          <h3>Сценарии встреч</h3>
+          <div class="tiny muted">Разные форматы общения внутри одного продукта</div>
+        </div>
+      </div>
+
+      <div class="scene-grid">
+        <div class="scene-card">
+          <div class="scene-screen dark">Личная встреча</div>
+          <div class="tiny muted">Приватный разговор между двумя участниками</div>
         </div>
 
-        <article class="feature-card card glass">
-          <h3>Calls scaffold</h3>
-          <p class="muted">На следующем шаге добавим call lobby, access states и Jitsi-ready экран.</p>
-        </article>
-      </section>
+        <div class="scene-card">
+          <div class="scene-screen dark">Круг участников</div>
+          <div class="tiny muted">Совместное обсуждение в закрытом пространстве</div>
+        </div>
+
+        <div class="scene-card">
+          <div class="scene-screen locked">Доступ ограничен</div>
+          <div class="tiny muted">Расширенный вход зависит от уровня доступа</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- RU: Блок предстоящих встреч. -->
+    <!-- EN: Upcoming meetings block. -->
+    <article class="call-panel card glass wide">
+      <div class="panel-head">
+        <div>
+          <h3>Предстоящие встречи</h3>
+          <div class="tiny muted">Календарь закрытых и личных созвонов</div>
+        </div>
+      </div>
+
+      <div class="meeting-list">
+        <div class="meeting-item">
+          <div>
+            <strong>Вечерний круг у воды</strong>
+            <div class="tiny muted">Сегодня · 20:00</div>
+          </div>
+          <span class="tag premium">по подписке</span>
+        </div>
+
+        <div class="meeting-item">
+          <div>
+            <strong>Личная встреча с наставником</strong>
+            <div class="tiny muted">Завтра · 12:30</div>
+          </div>
+          <span class="tag">личная</span>
+        </div>
+
+        <div class="meeting-item">
+          <div>
+            <strong>Закрытая беседа ведущих</strong>
+            <div class="tiny muted">Суббота · 18:00</div>
+          </div>
+          <span class="tag">закрыто</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
 
       <!-- RU: Экран кошелька и premium-функций. -->
       <!-- EN: Wallet and premium features screen. -->
