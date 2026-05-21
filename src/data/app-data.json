@@ -1,1 +1,12 @@
-
+{
+  "_comment_ru": "Базовая конфигурация приложения для v2-прототипа.",
+  "_comment_en": "Base application configuration for the v2 prototype.",
+  "brand": "Baikal Messenger",
+  "version": "v2",
+  "modes": ["chats", "feed", "calls", "wallet", "profile"],
+  "videoProvider": "jitsi",
+  "feedPostingRoles": ["premium", "admin"],
+  "callsAllowedRoles": ["premium", "admin"],
+  "tokenName": "духовные токены",
+  "premiumEnabled": true
+}
