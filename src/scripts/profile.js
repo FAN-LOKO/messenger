@@ -1,11 +1,16 @@
-// RU: Конфигурация и будущая логика модуля профиля.
-// EN: Configuration and future logic for the profile module.
+// RU: Конфигурация и базовая логика экрана профиля участника.
+// EN: Configuration and base logic for the member profile screen.
 
 window.BAIKAL_PROFILE = {
-  blocks: [
-    "profile-card",
-    "role-badges",
-    "permissions-summary",
-    "settings-preview"
+  sections: [
+    "main-profile",
+    "access-overview",
+    "identity",
+    "settings"
+  ],
+  tags: [
+    "extended-status",
+    "administrator",
+    "host"
   ]
 };
