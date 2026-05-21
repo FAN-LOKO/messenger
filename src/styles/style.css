@@ -78,6 +78,8 @@ html {
 body {
   font-family: var(--font-body);
   background:
+    linear-gradient(rgba(10, 9, 8, 0.58), rgba(10, 9, 8, 0.70)),
+    url("https://pplx-res.cloudinary.com/image/upload/pplx_search_images/836b73cc78c08edfae71ebc9853359c27c4d1128.jpg") center center / cover fixed no-repeat,
     radial-gradient(circle at 82% 10%, rgba(103, 185, 181, 0.10), transparent 18%),
     radial-gradient(circle at 14% 82%, rgba(214, 167, 108, 0.06), transparent 24%),
     radial-gradient(circle at 50% 0%, rgba(156, 228, 221, 0.06), transparent 28%),
