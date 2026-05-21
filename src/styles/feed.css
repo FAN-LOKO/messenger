@@ -1,1 +1,98 @@
+/* RU: Стили экрана ленты, карточек публикаций, фильтров и медиа-блоков. */
+/* EN: Styles for feed screen, publication cards, filters, and media blocks. */
 
+.feed-shell {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 16px;
+}
+
+.feed-side {
+  padding: 20px;
+  border-radius: 24px;
+  height: fit-content;
+}
+
+.filter-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.chip {
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.04);
+  font-size: var(--text-sm);
+  border: 1px solid var(--color-border);
+  transition: var(--transition);
+}
+
+.chip.active {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-2));
+  color: #fff;
+  border-color: transparent;
+}
+
+.feed-stream {
+  display: grid;
+  gap: 16px;
+}
+
+.post-card {
+  border-radius: 24px;
+  padding: 20px;
+}
+
+.post-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post-badge {
+  padding: 0.32rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(200,159,88,.14);
+  color: var(--color-accent);
+  font-size: var(--text-xs);
+}
+
+.post-badge.free {
+  background: rgba(109,183,178,.14);
+  color: var(--color-primary);
+}
+
+.post-media {
+  height: 180px;
+  border-radius: 20px;
+  background:
+    linear-gradient(135deg, rgba(109,183,178,.22), rgba(200,159,88,.12)),
+    radial-gradient(circle at top right, rgba(255,255,255,.12), transparent 30%);
+  margin-top: 14px;
+}
+
+.post-media.small-media {
+  height: 120px;
+}
+
+.post-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  color: var(--color-muted);
+  margin-top: 14px;
+}
+
+.locked-post {
+  border-style: dashed;
+}
+
+@media (max-width: 1100px) {
+  .feed-shell {
+    grid-template-columns: 1fr;
+  }
+}
