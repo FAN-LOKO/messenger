@@ -580,19 +580,109 @@
       <!-- RU: Экран профиля. -->
       <!-- EN: Profile screen. -->
       <section class="view" id="view-profile">
-        <div class="hero-head">
-          <div>
-            <div class="eyebrow">Profile mode</div>
-            <h1>Профиль и права доступа</h1>
-            <p class="muted">Роли, бейджи, настройки и статус внутри системы.</p>
+  <!-- RU: Экран профиля участника, статуса, ролей и персональных настроек. -->
+  <!-- EN: Member profile screen with status, roles, and personal settings. -->
+  <div class="hero-head">
+    <div>
+      <div class="eyebrow">Profile</div>
+      <h1>Профиль и статус участника</h1>
+      <p class="muted">Роль в системе, уровень доступа, персональный образ и основные настройки внутри платформы.</p>
+    </div>
+  </div>
+
+  <div class="profile-layout">
+    <!-- RU: Главная карточка профиля участника. -->
+    <!-- EN: Main member profile card. -->
+    <article class="profile-panel card glass soft-glow">
+      <div class="profile-main">
+        <div class="avatar big">BK</div>
+        <div>
+          <h3>Хранитель Байкала</h3>
+          <p class="muted">Куратор сообщества, ведущий закрытых встреч и автор материалов для внутреннего круга.</p>
+          <div class="tag-row">
+            <span class="tag premium">расширенный статус</span>
+            <span class="tag">администратор</span>
+            <span class="tag">ведущий</span>
           </div>
         </div>
+      </div>
+    </article>
 
-        <article class="feature-card card glass">
-          <h3>Profile scaffold</h3>
-          <p class="muted">Следующим этапом появятся role badges, permissions summary и profile blocks.</p>
-        </article>
-      </section>
+    <!-- RU: Права и доступы. -->
+    <!-- EN: Permissions and access overview. -->
+    <article class="profile-detail card glass">
+      <div class="panel-head">
+        <div>
+          <h3>Возможности участия</h3>
+          <div class="tiny muted">Что доступно этому профилю внутри платформы</div>
+        </div>
+      </div>
+
+      <div class="access-list">
+        <div class="access-row">
+          <span>Публикации в ленте</span>
+          <strong>доступно</strong>
+        </div>
+        <div class="access-row">
+          <span>Закрытые встречи</span>
+          <strong>доступно</strong>
+        </div>
+        <div class="access-row">
+          <span>Управление кругами</span>
+          <strong>доступно</strong>
+        </div>
+        <div class="access-row">
+          <span>Поддержка авторов</span>
+          <strong>активно</strong>
+        </div>
+      </div>
+    </article>
+
+    <!-- RU: Карточка визуального образа профиля. -->
+    <!-- EN: Profile identity and presentation card. -->
+    <article class="profile-detail card glass wide-profile">
+      <div class="panel-head">
+        <div>
+          <h3>Образ участника</h3>
+          <div class="tiny muted">Публичное описание и визуальная идентичность профиля</div>
+        </div>
+      </div>
+
+      <div class="profile-identity">
+        <div class="identity-card">
+          <span class="tiny muted">Стиль профиля</span>
+          <strong>Тёплый, закрытый, созерцательный</strong>
+        </div>
+        <div class="identity-card">
+          <span class="tiny muted">Основная роль</span>
+          <strong>Ведущий закрытых кругов</strong>
+        </div>
+        <div class="identity-card">
+          <span class="tiny muted">Материалы</span>
+          <strong>Публикации, встречи, голосовые практики</strong>
+        </div>
+      </div>
+    </article>
+
+    <!-- RU: Блок настроек и персонального управления. -->
+    <!-- EN: Settings and personal control block. -->
+    <article class="profile-detail card glass wide-profile">
+      <div class="panel-head">
+        <div>
+          <h3>Настройки профиля</h3>
+          <div class="tiny muted">Базовые направления персонального управления</div>
+        </div>
+      </div>
+
+      <div class="settings-grid">
+        <div class="setting-card">Внешний вид профиля</div>
+        <div class="setting-card">Приватность</div>
+        <div class="setting-card">Уведомления</div>
+        <div class="setting-card">Статус участия</div>
+      </div>
+    </article>
+  </div>
+</section>
     </main>
   </div>
 
