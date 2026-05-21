@@ -1,1 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f5f67" />
+  <meta name="description" content="Baikal Messenger v2 — PWA community platform prototype." />
 
+  <!-- RU: Manifest для PWA-режима и установки приложения. -->
+  <!-- EN: Manifest for PWA mode and installable application behavior. -->
+  <link rel="manifest" href="../public/manifest.webmanifest" />
+
+  <!-- RU: Подключение шрифта проекта. -->
+  <!-- EN: Project font connection. -->
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet" />
+
+  <!-- RU: Базовые и модульные стили интерфейса. -->
+  <!-- EN: Base and modular interface styles. -->
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/layout.css" />
+  <link rel="stylesheet" href="./styles/components.css" />
+  <link rel="stylesheet" href="./styles/chat.css" />
+  <link rel="stylesheet" href="./styles/feed.css" />
+  <link rel="stylesheet" href="./styles/calls.css" />
+  <link rel="stylesheet" href="./styles/wallet.css" />
+  <link rel="stylesheet" href="./styles/profile.css" />
+  <link rel="stylesheet" href="./styles/onboarding.css" />
+  <link rel="stylesheet" href="./styles/premium.css" />
+  <link rel="stylesheet" href="./styles/media.css" />
+  <link rel="stylesheet" href="./styles/search.css" />
+  <link rel="stylesheet" href="./styles/admin.css" />
+  <link rel="stylesheet" href="./styles/tokens.css" />
+  <link rel="stylesheet" href="./styles/responsive.css" />
+
+  <title>Baikal Messenger v2</title>
+</head>
+<body>
+  <!-- RU: Главная оболочка приложения. -->
+  <!-- EN: Main application shell. -->
+  <div class="app-shell">
+    <aside class="sidebar glass card">
+      <div class="brand-row card glass soft-glow">
+        <div class="brand-block">
+          <div class="brand-mark">◉</div>
+          <div>
+            <div class="brand-title">Baikal Messenger</div>
+            <div class="tiny muted">community platform prototype</div>
+          </div>
+        </div>
+        <button class="icon-btn" id="themeToggle" aria-label="Сменить тему / Switch theme">☼</button>
+      </div>
+
+      <div class="profile-card card glass">
+        <div class="avatar">BK</div>
+        <div>
+          <div><strong>Хранитель Байкала</strong></div>
+          <div class="tiny muted">admin · premium enabled</div>
+        </div>
+      </div>
+
+      <!-- RU: Главная навигация между режимами продукта. -->
+      <!-- EN: Main navigation between product modes. -->
+      <nav class="mode-nav">
+        <button class="mode-link active" data-view="chats">Чаты</button>
+        <button class="mode-link" data-view="feed">Лента</button>
+        <button class="mode-link" data-view="calls">Звонки</button>
+        <button class="mode-link" data-view="wallet">Кошелёк</button>
+        <button class="mode-link" data-view="profile">Профиль</button>
+      </nav>
+    </aside>
+
+    <main class="workspace">
+      <!-- RU: Экран чатов. -->
+      <!-- EN: Chats screen. -->
+      <section class="view view-active" id="view-chats">
+        <div class="hero-head">
+          <div>
+            <div class="eyebrow">Messenger mode</div>
+            <h1>Чаты и внутренние круги</h1>
+            <p class="muted">Личные диалоги, групповые комнаты, голосовые сообщения и premium-гейтинг.</p>
+          </div>
+        </div>
+
+        <article class="feature-card card glass">
+          <h3>Chats scaffold</h3>
+          <p class="muted">На следующем шаге сюда перенесём полноценный chat layout со списком комнат, сообщениями и composer.</p>
+        </article>
+      </section>
+
+      <!-- RU: Экран ленты постов. -->
+      <!-- EN: Feed screen. -->
+      <section class="view" id="view-feed">
+        <div class="hero-head">
+          <div>
+            <div class="eyebrow">Feed mode</div>
+            <h1>Лента сообщества</h1>
+            <p class="muted">Отдельный social layer для публикаций, premium-постов и контента по unlock-модели.</p>
+          </div>
+        </div>
+
+        <article class="feature-card card glass">
+          <h3>Feed scaffold</h3>
+          <p class="muted">Следующим этапом добавим карточки постов, locked content и author cards.</p>
+        </article>
+      </section>
+
+      <!-- RU: Экран видеозвонков. -->
+      <!-- EN: Calls screen. -->
+      <section class="view" id="view-calls">
+        <div class="hero-head">
+          <div>
+            <div class="eyebrow">Calls mode</div>
+            <h1>Видеозвонки через Jitsi</h1>
+            <p class="muted">1:1 и групповые звонки для admin и premium-пользователей.</p>
+          </div>
+        </div>
+
+        <article class="feature-card card glass">
+          <h3>Calls scaffold</h3>
+          <p class="muted">На следующем шаге добавим call lobby, access states и Jitsi-ready экран.</p>
+        </article>
+      </section>
+
+      <!-- RU: Экран кошелька и premium-функций. -->
+      <!-- EN: Wallet and premium features screen. -->
+      <section class="view" id="view-wallet">
+        <div class="hero-head">
+          <div>
+            <div class="eyebrow">Wallet mode</div>
+            <h1>Токены и premium</h1>
+            <p class="muted">Внутренняя валюта, unlock-контент, подарки и подписка.</p>
+          </div>
+        </div>
+
+        <article class="feature-card card glass">
+          <h3>Wallet scaffold</h3>
+          <p class="muted">Далее сюда добавим баланс, историю трат, premium status и monetization cards.</p>
+        </article>
+      </section>
+
+      <!-- RU: Экран профиля. -->
+      <!-- EN: Profile screen. -->
+      <section class="view" id="view-profile">
+        <div class="hero-head">
+          <div>
+            <div class="eyebrow">Profile mode</div>
+            <h1>Профиль и права доступа</h1>
+            <p class="muted">Роли, бейджи, настройки и статус внутри системы.</p>
+          </div>
+        </div>
+
+        <article class="feature-card card glass">
+          <h3>Profile scaffold</h3>
+          <p class="muted">Следующим этапом появятся role badges, permissions summary и profile blocks.</p>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <!-- RU: Подключение модульных скриптов приложения. -->
+  <!-- EN: Connecting modular application scripts. -->
+  <script src="./scripts/router.js"></script>
+  <script src="./scripts/app.js"></script>
+  <script src="./scripts/chat.js"></script>
+  <script src="./scripts/feed.js"></script>
+  <script src="./scripts/calls.js"></script>
+  <script src="./scripts/wallet.js"></script>
+  <script src="./scripts/profile.js"></script>
+  <script src="./scripts/onboarding.js"></script>
+  <script src="./scripts/premium.js"></script>
+  <script src="./scripts/search.js"></script>
+  <script src="./scripts/data-store.js"></script>
+  <script src="./scripts/ui-state.js"></script>
+</body>
+</html>
