@@ -462,19 +462,120 @@
       <!-- RU: Экран кошелька и premium-функций. -->
       <!-- EN: Wallet and premium features screen. -->
       <section class="view" id="view-wallet">
-        <div class="hero-head">
+  <!-- RU: Экран внутренней валюты, подписки и поддержки авторов. -->
+  <!-- EN: Screen for internal currency, subscription, and creator support. -->
+  <div class="hero-head">
+    <div>
+      <div class="eyebrow">Wallet</div>
+      <h1>Токены и возможности доступа</h1>
+      <p class="muted">Баланс, подписка, подарки, поддержка авторов и история открытых материалов внутри платформы.</p>
+    </div>
+  </div>
+
+  <div class="wallet-grid">
+    <!-- RU: Карточка текущего баланса. -->
+    <!-- EN: Current balance card. -->
+    <article class="wallet-panel card glass soft-glow">
+      <div class="tiny muted">Ваш баланс</div>
+      <div class="balance">1 280 духовных токенов</div>
+
+      <div class="wallet-line">
+        <span>Поддержка авторов</span>
+        <strong>184</strong>
+      </div>
+      <div class="wallet-line">
+        <span>Открытые материалы</span>
+        <strong>92</strong>
+      </div>
+
+      <div class="wallet-actions">
+        <button class="primary-btn">Пополнить баланс</button>
+        <button class="secondary-btn">История операций</button>
+      </div>
+    </article>
+
+    <!-- RU: Карточка статуса участия. -->
+    <!-- EN: Membership status card. -->
+    <article class="wallet-panel card glass">
+      <div class="tiny muted">Статус участия</div>
+      <div class="balance">Активен до 30 июня</div>
+
+      <div class="wallet-line">
+        <span>Публикации в ленте</span>
+        <strong>доступно</strong>
+      </div>
+      <div class="wallet-line">
+        <span>Закрытые встречи</span>
+        <strong>доступно</strong>
+      </div>
+      <div class="wallet-line">
+        <span>Личные встречи</span>
+        <strong>доступно</strong>
+      </div>
+
+      <div class="wallet-actions">
+        <button class="secondary-btn">Управление статусом</button>
+      </div>
+    </article>
+
+    <!-- RU: Блок экономики платформы. -->
+    <!-- EN: Platform economy overview block. -->
+    <article class="wallet-panel card glass wide-wallet">
+      <div class="panel-head">
+        <div>
+          <h3>Внутренняя экономика платформы</h3>
+          <div class="tiny muted">Как участники используют токены и дополнительные возможности</div>
+        </div>
+      </div>
+
+      <div class="monet-grid">
+        <div class="monet-card">Подписка</div>
+        <div class="monet-card">Подарки</div>
+        <div class="monet-card">Поддержка авторов</div>
+        <div class="monet-card">Открытие материалов</div>
+        <div class="monet-card">Закрытые встречи</div>
+        <div class="monet-card">Особые публикации</div>
+      </div>
+    </article>
+
+    <!-- RU: История активности внутри кошелька. -->
+    <!-- EN: Wallet activity history block. -->
+    <article class="wallet-panel card glass wide-wallet">
+      <div class="panel-head">
+        <div>
+          <h3>Последняя активность</h3>
+          <div class="tiny muted">Недавние действия по балансу и доступу</div>
+        </div>
+      </div>
+
+      <div class="wallet-history">
+        <div class="history-item">
           <div>
-            <div class="eyebrow">Wallet mode</div>
-            <h1>Токены и premium</h1>
-            <p class="muted">Внутренняя валюта, unlock-контент, подарки и подписка.</p>
+            <strong>Открыт закрытый материал</strong>
+            <div class="tiny muted">Сегодня · 09:20</div>
           </div>
+          <span class="history-value minus">−5</span>
         </div>
 
-        <article class="feature-card card glass">
-          <h3>Wallet scaffold</h3>
-          <p class="muted">Далее сюда добавим баланс, историю трат, premium status и monetization cards.</p>
-        </article>
-      </section>
+        <div class="history-item">
+          <div>
+            <strong>Подарок автору</strong>
+            <div class="tiny muted">Вчера · 21:14</div>
+          </div>
+          <span class="history-value minus">−12</span>
+        </div>
+
+        <div class="history-item">
+          <div>
+            <strong>Пополнение баланса</strong>
+            <div class="tiny muted">Вчера · 14:02</div>
+          </div>
+          <span class="history-value plus">+150</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
 
       <!-- RU: Экран профиля. -->
       <!-- EN: Profile screen. -->
