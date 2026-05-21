@@ -1,5 +1,5 @@
-/* RU: Общие переиспользуемые компоненты проекта: luxury-pass для карточек, тегов и служебных блоков. */
-/* EN: Shared reusable components of the project: luxury pass for cards, tags, and helper blocks. */
+/* RU: Общие компоненты проекта: тёплые акценты, ледяное свечение и ритуальная глубина. */
+/* EN: Shared project components: warm accents, icy glow, and ritual depth. */
 
 .feature-card,
 .post-card,
@@ -9,17 +9,38 @@
 .call-panel,
 .chat-list-panel,
 .chat-main {
+  position: relative;
+  overflow: hidden;
   border-radius: 22px;
   padding: 20px;
   background:
     linear-gradient(180deg, rgba(255,255,255,.022), rgba(255,255,255,.01)),
-    transparent;
+    linear-gradient(135deg, rgba(103,185,181,.015), transparent 42%);
+}
+
+.feature-card::before,
+.post-card::before,
+.wallet-panel::before,
+.profile-panel::before,
+.profile-detail::before,
+.call-panel::before,
+.chat-list-panel::before,
+.chat-main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at top right, rgba(156,228,221,.05), transparent 22%),
+    radial-gradient(circle at bottom left, rgba(214,167,108,.035), transparent 24%);
+  opacity: .8;
 }
 
 .soft-glow {
   box-shadow:
-    0 0 0 1px rgba(209,165,109,.06),
-    0 16px 42px rgba(209,165,109,.07);
+    0 0 0 1px rgba(209,165,109,.05),
+    0 16px 42px rgba(209,165,109,.06),
+    0 0 36px rgba(103,185,181,.04);
 }
 
 .tag-row {
@@ -32,14 +53,18 @@
 .tag {
   padding: 0.28rem 0.62rem;
   border-radius: var(--radius-pill);
-  background: rgba(255,255,255,.035);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)),
+    transparent;
   font-size: 0.74rem;
   border: 1px solid var(--color-border);
   color: var(--color-muted);
 }
 
 .tag.premium {
-  background: var(--color-accent-soft);
+  background:
+    linear-gradient(180deg, rgba(214,167,108,.12), rgba(214,167,108,.05)),
+    transparent;
   color: var(--color-accent);
 }
 
