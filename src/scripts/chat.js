@@ -1,5 +1,5 @@
-// RU: Конфигурация и будущая логика модуля чатов.
-// EN: Configuration and future logic for the chat module.
+// RU: Конфигурация и базовая логика модуля чатов.
+// EN: Configuration and base logic for the chat module.
 
 window.BAIKAL_CHAT = {
   features: [
@@ -9,5 +9,12 @@ window.BAIKAL_CHAT = {
     "emoji",
     "read-status",
     "offline-history"
+  ],
+  currentRoom: "Круг Байкала",
+  states: [
+    "default",
+    "premium-room",
+    "offline-sync",
+    "voice-message"
   ]
 };
