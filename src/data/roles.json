@@ -1,1 +1,26 @@
-
+{
+  "_comment_ru": "Роли проекта и базовые разрешения для демонстрационной версии.",
+  "_comment_en": "Project roles and base permissions for the demo version.",
+  "roles": [
+    {
+      "id": "user",
+      "label": "User",
+      "permissions": ["read_feed", "chat", "react", "comment"]
+    },
+    {
+      "id": "premium",
+      "label": "Premium",
+      "permissions": ["read_feed", "chat", "react", "comment", "publish_post", "create_1to1_call", "join_premium_call", "unlock_content"]
+    },
+    {
+      "id": "moderator",
+      "label": "Moderator",
+      "permissions": ["moderate_chat", "moderate_feed", "hide_content", "pin_content"]
+    },
+    {
+      "id": "admin",
+      "label": "Admin",
+      "permissions": ["manage_roles", "manage_rooms", "create_1to1_call", "create_group_call", "manage_policies", "feature_content"]
+    }
+  ]
+}
