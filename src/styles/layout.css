@@ -1,1 +1,97 @@
+/* RU: Сетка приложения, sidebar, workspace и общая компоновка экранов. */
+/* EN: Application grid, sidebar, workspace, and general screen layout. */
 
+.app-shell {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 16px;
+  padding: 16px;
+  min-height: 100dvh;
+}
+
+.sidebar {
+  border-radius: 28px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.workspace {
+  border-radius: 32px;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.brand-row,
+.profile-card {
+  border-radius: 24px;
+  padding: 16px;
+}
+
+.brand-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-block {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.mode-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mode-link {
+  padding: 0.95rem 1rem;
+  border-radius: 18px;
+  text-align: left;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--color-border);
+  transition: var(--transition);
+}
+
+.mode-link.active {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-2));
+  color: #fff;
+  border-color: transparent;
+}
+
+.hero-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: end;
+}
+
+.hero-head h1 {
+  font-size: var(--text-xl);
+  margin-bottom: 8px;
+}
+
+.eyebrow {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-accent);
+  margin-bottom: 8px;
+}
+
+.view {
+  display: none;
+  gap: 20px;
+}
+
+.view.view-active {
+  display: grid;
+}
