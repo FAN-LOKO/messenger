@@ -1,24 +1,38 @@
-// RU: Базовая инициализация приложения и переключение темы.
-// EN: Base application initialization and theme switching.
+// RU: Базовая инициализация приложения, переключение темы и сворачивание боковой панели.
+// EN: Base application initialization, theme switching, and sidebar collapse.
 
 (() => {
   const root = document.documentElement;
-  const toggle = document.getElementById('themeToggle');
+  const shell = document.querySelector('.app-shell');
+  const themeToggle = document.getElementById('themeToggle');
+  const sidebarToggle = document.getElementById('sidebarToggle');
 
   let theme = 'dark';
   root.setAttribute('data-theme', theme);
 
-  const renderToggle = () => {
-    if (!toggle) return;
-    toggle.textContent = theme === 'dark' ? '☼' : '☾';
+  const renderThemeToggle = () => {
+    if (!themeToggle) return;
+    themeToggle.textContent = theme === 'dark' ? '☼' : '☾';
   };
 
-  renderToggle();
+  const renderSidebarToggle = () => {
+    if (!sidebarToggle || !shell) return;
+    sidebarToggle.textContent = shell.classList.contains('sidebar-collapsed') ? '→' : '←';
+  };
 
-  toggle?.addEventListener('click', () => {
+  renderThemeToggle();
+  renderSidebarToggle();
+
+  themeToggle?.addEventListener('click', () => {
     theme = theme === 'dark' ? 'light' : 'dark';
     root.setAttribute('data-theme', theme);
-    renderToggle();
+    renderThemeToggle();
+  });
+
+  sidebarToggle?.addEventListener('click', () => {
+    if (!shell) return;
+    shell.classList.toggle('sidebar-collapsed');
+    renderSidebarToggle();
   });
 
   if ('serviceWorker' in navigator) {
