@@ -154,6 +154,19 @@
     border-color var(--transition),
     box-shadow var(--transition),
     color var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mode-icon {
+  width: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.92rem;
+  opacity: 0.92;
 }
 
 .mode-link:hover {
@@ -219,7 +232,7 @@
 
 .app-shell.sidebar-collapsed .brand-copy,
 .app-shell.sidebar-collapsed .profile-copy,
-.app-shell.sidebar-collapsed .mode-link span {
+.app-shell.sidebar-collapsed .mode-link span:not(.mode-icon) {
   display: none;
 }
 
@@ -244,6 +257,11 @@
   padding: 0;
 }
 
+.app-shell.sidebar-collapsed .mode-icon {
+  width: auto;
+  font-size: 1rem;
+}
+
 @media (max-width: 980px) {
   .app-shell,
   .app-shell.sidebar-collapsed {
@@ -256,7 +274,7 @@
 
   .app-shell.sidebar-collapsed .brand-copy,
   .app-shell.sidebar-collapsed .profile-copy,
-  .app-shell.sidebar-collapsed .mode-link span {
+  .app-shell.sidebar-collapsed .mode-link span:not(.mode-icon) {
     display: initial;
   }
 
@@ -265,8 +283,13 @@
   }
 
   .app-shell.sidebar-collapsed .mode-link {
-    display: block;
+    display: flex;
     padding: 0.68rem 0.78rem;
+  }
+
+  .app-shell.sidebar-collapsed .mode-icon {
+    width: 18px;
+    font-size: 0.92rem;
   }
 }
 
