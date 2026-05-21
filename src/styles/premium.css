@@ -1,1 +1,7 @@
+/* RU: Стили premium-блоков, paywall и locked-состояний. */
+/* EN: Styles for premium blocks, paywall, and locked states. */
 
+.premium-banner {}
+.premium-card {}
+.paywall-card {}
+.locked-state {}
