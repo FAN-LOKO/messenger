@@ -1,1 +1,125 @@
+/* RU: Стили экрана звонков, подготовки ко входу, сценариев встреч и списка событий. */
+/* EN: Styles for calls screen, join preparation, meeting scenarios, and event list. */
 
+.calls-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.call-panel {
+  border-radius: 24px;
+  padding: 20px;
+}
+
+.call-panel.wide {
+  grid-column: 1 / -1;
+}
+
+.call-preview {
+  display: grid;
+  gap: 16px;
+}
+
+.call-stage {
+  height: 220px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #161310, #26211d);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: 20px;
+}
+
+.call-options {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.call-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.access-list {
+  display: grid;
+  gap: 8px;
+}
+
+.access-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.access-row:last-child {
+  border-bottom: none;
+}
+
+.scene-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.scene-card {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--color-border);
+}
+
+.scene-screen {
+  height: 120px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 12px;
+}
+
+.scene-screen.dark {
+  background: linear-gradient(180deg, #151210, #26211d);
+  color: #fff;
+}
+
+.scene-screen.locked {
+  background: linear-gradient(180deg, #261f17, #171311);
+  color: var(--color-accent);
+}
+
+.meeting-list {
+  display: grid;
+  gap: 12px;
+}
+
+.meeting-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--color-border);
+}
+
+@media (max-width: 1100px) {
+  .calls-grid,
+  .scene-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .call-panel.wide {
+    grid-column: auto;
+  }
+}
