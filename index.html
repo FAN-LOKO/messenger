@@ -41,23 +41,23 @@
   <div class="app-shell">
     <aside class="sidebar glass card">
       <div class="brand-row card glass soft-glow">
-  <div class="brand-block">
-    <div class="brand-mark">◉</div>
-    <div class="brand-copy">
-      <div class="brand-title">Baikal Messenger</div>
-      <div class="tiny muted">community platform prototype</div>
-    </div>
-  </div>
+        <div class="brand-block">
+          <div class="brand-mark">◉</div>
+          <div class="brand-copy">
+            <div class="brand-title">Baikal Messenger</div>
+            <div class="tiny muted">community platform prototype</div>
+          </div>
+        </div>
 
-  <div class="brand-actions">
-    <button class="icon-btn" id="sidebarToggle" aria-label="Свернуть панель / Collapse sidebar">←</button>
-    <button class="icon-btn" id="themeToggle" aria-label="Сменить тему / Switch theme">☼</button>
-  </div>
-</div>
+        <div class="brand-actions">
+          <button class="icon-btn" id="sidebarToggle" aria-label="Свернуть панель / Collapse sidebar">←</button>
+          <button class="icon-btn" id="themeToggle" aria-label="Сменить тему / Switch theme">☼</button>
+        </div>
+      </div>
 
       <div class="profile-card card glass">
         <div class="avatar">BK</div>
-        <div>
+        <div class="profile-copy">
           <div><strong>Хранитель Байкала</strong></div>
           <div class="tiny muted">admin · premium enabled</div>
         </div>
@@ -66,11 +66,11 @@
       <!-- RU: Главная навигация между режимами продукта. -->
       <!-- EN: Main navigation between product modes. -->
       <nav class="mode-nav">
-        <button class="mode-link active" data-view="chats">Чаты</button>
-        <button class="mode-link" data-view="feed">Лента</button>
-        <button class="mode-link" data-view="calls">Звонки</button>
-        <button class="mode-link" data-view="wallet">Кошелёк</button>
-        <button class="mode-link" data-view="profile">Профиль</button>
+        <button class="mode-link active" data-view="chats"><span>Чаты</span></button>
+        <button class="mode-link" data-view="feed"><span>Лента</span></button>
+        <button class="mode-link" data-view="calls"><span>Звонки</span></button>
+        <button class="mode-link" data-view="wallet"><span>Кошелёк</span></button>
+        <button class="mode-link" data-view="profile"><span>Профиль</span></button>
       </nav>
     </aside>
 
@@ -78,615 +78,573 @@
       <!-- RU: Экран чатов. -->
       <!-- EN: Chats screen. -->
       <section class="view view-active" id="view-chats">
-  <!-- RU: Основной экран чатов с комнатами, сообщениями и composer. -->
-  <!-- EN: Main chats screen with rooms, messages, and composer. -->
-  <div class="hero-head">
-    <div>
-      <div class="eyebrow">Messenger mode</div>
-      <h1>Чаты и внутренние круги</h1>
-      <p class="muted">Личные диалоги, групповые комнаты, голосовые сообщения, реакции и premium-гейтинг внутри сообщества.</p>
-    </div>
-  </div>
-
-  <div class="chat-shell">
-    <!-- RU: Левая колонка со списком комнат. -->
-    <!-- EN: Left column with room list. -->
-    <aside class="chat-list-panel card glass">
-      <div class="panel-head">
-        <div>
-          <h3>Комнаты</h3>
-          <div class="tiny muted">14 активных пространств</div>
+        <div class="hero-head">
+          <div>
+            <div class="eyebrow">Messenger mode</div>
+            <h1>Чаты и внутренние круги</h1>
+            <p class="muted">Личные диалоги, групповые комнаты, голосовые сообщения, реакции и premium-доступ внутри сообщества.</p>
+          </div>
         </div>
-        <button class="icon-btn" aria-label="Создать комнату / Create room">＋</button>
-      </div>
 
-      <div class="room-list">
-        <article class="room-item active">
-          <div class="avatar small">Б</div>
-          <div class="room-content">
-            <div class="room-top">
-              <strong>Круг Байкала</strong>
-              <span class="tiny muted">10:03</span>
+        <div class="chat-shell">
+          <aside class="chat-list-panel card glass">
+            <div class="panel-head">
+              <div>
+                <h3>Комнаты</h3>
+                <div class="tiny muted">14 активных пространств</div>
+              </div>
+              <button class="icon-btn" aria-label="Создать комнату / Create room">＋</button>
             </div>
-            <p class="muted">Новый закрытый голосовой ритуал уже доступен.</p>
-            <div class="tag-row">
-              <span class="tag premium">premium</span>
-              <span class="tag">group</span>
-            </div>
-          </div>
-        </article>
 
-        <article class="room-item">
-          <div class="avatar small">Л</div>
-          <div class="room-content">
-            <div class="room-top">
-              <strong>Ледяной берег</strong>
-              <span class="tiny muted">09:41</span>
-            </div>
-            <p class="muted">3 новых комментария и 1 подарок автору.</p>
-            <div class="tag-row">
-              <span class="tag">feed-linked</span>
-            </div>
-          </div>
-        </article>
+            <div class="room-list">
+              <article class="room-item active">
+                <div class="avatar small">Б</div>
+                <div class="room-content">
+                  <div class="room-top">
+                    <strong>Круг Байкала</strong>
+                    <span class="tiny muted">10:03</span>
+                  </div>
+                  <p class="muted">Новый закрытый голосовой ритуал уже доступен.</p>
+                  <div class="tag-row">
+                    <span class="tag premium">по подписке</span>
+                    <span class="tag">группа</span>
+                  </div>
+                </div>
+              </article>
 
-        <article class="room-item">
-          <div class="avatar small">А</div>
-          <div class="room-content">
-            <div class="room-top">
-              <strong>Алтанай</strong>
-              <span class="tiny muted">вчера</span>
-            </div>
-            <p class="muted">Отправила изображения для платной публикации.</p>
-          </div>
-        </article>
+              <article class="room-item">
+                <div class="avatar small">Л</div>
+                <div class="room-content">
+                  <div class="room-top">
+                    <strong>Ледяной берег</strong>
+                    <span class="tiny muted">09:41</span>
+                  </div>
+                  <p class="muted">3 новых комментария и 1 подарок автору.</p>
+                  <div class="tag-row">
+                    <span class="tag">материалы</span>
+                  </div>
+                </div>
+              </article>
 
-        <article class="room-item">
-          <div class="avatar small">О</div>
-          <div class="room-content">
-            <div class="room-top">
-              <strong>Огни шамана</strong>
-              <span class="tiny muted">вчера</span>
-            </div>
-            <p class="muted">Планируется видеокруг для premium и admin.</p>
-            <div class="tag-row">
-              <span class="tag">calls</span>
-            </div>
-          </div>
-        </article>
-      </div>
-    </aside>
+              <article class="room-item">
+                <div class="avatar small">А</div>
+                <div class="room-content">
+                  <div class="room-top">
+                    <strong>Алтанай</strong>
+                    <span class="tiny muted">вчера</span>
+                  </div>
+                  <p class="muted">Отправила изображения для закрытой публикации.</p>
+                </div>
+              </article>
 
-    <!-- RU: Правая колонка с активным чатом. -->
-    <!-- EN: Right column with active chat view. -->
-    <section class="chat-main card glass">
-      <div class="chat-main-top">
-        <div>
-          <h3>Круг Байкала</h3>
-          <div class="tiny muted">12 участников · 3 ведущих · offline sync active</div>
+              <article class="room-item">
+                <div class="avatar small">О</div>
+                <div class="room-content">
+                  <div class="room-top">
+                    <strong>Огни шамана</strong>
+                    <span class="tiny muted">вчера</span>
+                  </div>
+                  <p class="muted">Планируется видеовстреча для расширенного круга.</p>
+                  <div class="tag-row">
+                    <span class="tag">встреча</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </aside>
+
+          <section class="chat-main card glass">
+            <div class="chat-main-top">
+              <div>
+                <h3>Круг Байкала</h3>
+                <div class="tiny muted">12 участников · 3 ведущих · история доступна без сети</div>
+              </div>
+              <div class="chat-top-actions">
+                <button class="icon-btn" aria-label="Голосовое / Voice">🎙</button>
+                <button class="icon-btn" aria-label="Изображение / Image">🖼</button>
+                <button class="icon-btn" aria-label="Избранное / Favorite">✦</button>
+              </div>
+            </div>
+
+            <div class="chat-banner card glass">
+              <span>История всегда под рукой</span>
+              <span class="tiny muted">Сообщения обновляются автоматически, когда соединение снова появляется</span>
+            </div>
+
+            <div class="message-list">
+              <article class="message-bubble">
+                <div class="tiny muted">Алтанай · moderator</div>
+                <p>Открыла новый закрытый ритуал. Доступ по подписке или за 5 духовных токенов.</p>
+                <div class="message-meta">
+                  <span>🔥 6 · 💎 3</span>
+                  <span>10:01 · доставлено</span>
+                </div>
+              </article>
+
+              <article class="message-bubble self">
+                <p>Для заказчика важно показать единый слой: чат, платный контент, голосовые, подарки и доступ к звонкам для расширенного статуса.</p>
+                <div class="message-meta">
+                  <span>✨ 4</span>
+                  <span>10:03 · прочитано</span>
+                </div>
+              </article>
+
+              <article class="message-bubble voice-bubble">
+                <div class="tiny muted">Хранитель озера · ведущий</div>
+                <div class="voice-line">
+                  <button class="play-btn" aria-label="Воспроизвести / Play">▶</button>
+                  <div class="voice-wave">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <span class="tiny muted">01:42</span>
+                </div>
+                <div class="message-meta">
+                  <span>🎧 11 · 🙏 5</span>
+                  <span>доступно по статусу</span>
+                </div>
+              </article>
+
+              <article class="message-bubble">
+                <div class="tiny muted">Лада · user</div>
+                <p>Нужно ещё показать, что лента постов существует отдельно, а не смешана с чатами.</p>
+                <div class="message-meta">
+                  <span>💬 2</span>
+                  <span>10:05 · просмотрено</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="composer card glass">
+              <button class="icon-btn" aria-label="Emoji / Emoji">☺</button>
+              <textarea placeholder="Напишите сообщение, отправьте изображение или запишите голосовое сообщение..."></textarea>
+              <button class="recording" type="button">● REC</button>
+              <button class="primary-btn compact" type="button">Отправить</button>
+            </div>
+          </section>
         </div>
-        <div class="chat-top-actions">
-          <button class="icon-btn" aria-label="Голосовое / Voice">🎙</button>
-          <button class="icon-btn" aria-label="Изображение / Image">🖼</button>
-          <button class="icon-btn" aria-label="Ритуал / Ritual">✦</button>
-        </div>
-      </div>
-
-      <div class="chat-banner card glass">
-        <span>Offline-ready history enabled</span>
-        <span class="tiny muted">Сообщения синхронизируются после восстановления сети</span>
-      </div>
-
-      <div class="message-list">
-        <article class="message-bubble">
-          <div class="tiny muted">Алтанай · moderator</div>
-          <p>Открыла новый premium-ритуал. Доступ по подписке или за 5 духовных токенов.</p>
-          <div class="message-meta">
-            <span>🔥 6 · 💎 3</span>
-            <span>10:01 · delivered</span>
-          </div>
-        </article>
-
-        <article class="message-bubble self">
-          <p>Для заказчика важно показать единый слой: чат, платный контент, voice, подарки и доступ к звонкам для admin и premium.</p>
-          <div class="message-meta">
-            <span>✨ 4</span>
-            <span>10:03 · read</span>
-          </div>
-        </article>
-
-        <article class="message-bubble voice-bubble">
-          <div class="tiny muted">Хранитель озера · premium guide</div>
-          <div class="voice-line">
-            <button class="play-btn" aria-label="Воспроизвести / Play">▶</button>
-            <div class="voice-wave">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <span class="tiny muted">01:42</span>
-          </div>
-          <div class="message-meta">
-            <span>🎧 11 · 🙏 5</span>
-            <span>premium unlock</span>
-          </div>
-        </article>
-
-        <article class="message-bubble">
-          <div class="tiny muted">Лада · user</div>
-          <p>Нужно ещё показать, что лента постов существует отдельно, а не смешана с чатами.</p>
-          <div class="message-meta">
-            <span>💬 2</span>
-            <span>10:05 · seen</span>
-          </div>
-        </article>
-      </div>
-
-      <div class="composer card glass">
-        <button class="icon-btn" aria-label="Emoji / Emoji">☺</button>
-        <textarea placeholder="Напишите сообщение, отправьте изображение или запишите голосовой ритуал..."></textarea>
-        <button class="recording" type="button">● REC</button>
-        <button class="primary-btn compact" type="button">Отправить</button>
-      </div>
-    </section>
-  </div>
-</section>
+      </section>
 
       <!-- RU: Экран ленты постов. -->
       <!-- EN: Feed screen. -->
       <section class="view" id="view-feed">
-  <!-- RU: Экран отдельной ленты сообщества с постами и закрытым контентом. -->
-  <!-- EN: Dedicated community feed screen with posts and locked content. -->
-  <div class="hero-head">
-    <div>
-      <div class="eyebrow">Community feed</div>
-      <h1>Лента сообщества</h1>
-      <p class="muted">Публикации авторов, материалы круга, закрытые посты, комментарии и поддержка участников.</p>
-    </div>
-  </div>
+        <div class="hero-head">
+          <div>
+            <div class="eyebrow">Community feed</div>
+            <h1>Лента сообщества</h1>
+            <p class="muted">Публикации авторов, материалы круга, закрытые посты, комментарии и поддержка участников.</p>
+          </div>
+        </div>
 
-  <div class="feed-shell">
-    <!-- RU: Левая колонка с фильтрами и навигацией по типам публикаций. -->
-    <!-- EN: Left column with filters and publication type navigation. -->
-    <aside class="feed-side card glass">
-      <div class="panel-head">
-        <div>
-          <h3>Разделы</h3>
-          <div class="tiny muted">Настройка ленты под сценарий просмотра</div>
-        </div>
-      </div>
+        <div class="feed-shell">
+          <aside class="feed-side card glass">
+            <div class="panel-head">
+              <div>
+                <h3>Разделы</h3>
+                <div class="tiny muted">Настройка ленты под сценарий просмотра</div>
+              </div>
+            </div>
 
-      <div class="filter-stack">
-        <button class="chip active">Все публикации</button>
-        <button class="chip">По подписке</button>
-        <button class="chip">Изображения</button>
-        <button class="chip">Голосовые</button>
-        <button class="chip">Материалы круга</button>
-      </div>
-    </aside>
+            <div class="filter-stack">
+              <button class="chip active">Все публикации</button>
+              <button class="chip">По подписке</button>
+              <button class="chip">Изображения</button>
+              <button class="chip">Голосовые</button>
+              <button class="chip">Материалы круга</button>
+            </div>
+          </aside>
 
-    <!-- RU: Основной поток карточек публикаций. -->
-    <!-- EN: Main stream of publication cards. -->
-    <div class="feed-stream">
-      <article class="post-card card glass soft-glow">
-        <div class="post-head">
-          <strong>Алтанай</strong>
-          <span class="post-badge">по подписке</span>
-        </div>
-        <h3>Ритуал у воды — закрытая публикация</h3>
-        <p class="muted">Материал открыт участникам с активным статусом. Внутри — серия изображений, голосовое сопровождение и комментарии автора.</p>
-        <div class="post-media"></div>
-        <div class="post-actions">
-          <span>❤️ 42</span>
-          <span>💬 18</span>
-          <span>🎁 7</span>
-          <span>Закрыто</span>
-        </div>
-      </article>
+          <div class="feed-stream">
+            <article class="post-card card glass soft-glow">
+              <div class="post-head">
+                <strong>Алтанай</strong>
+                <span class="post-badge">по подписке</span>
+              </div>
+              <h3>Ритуал у воды — закрытая публикация</h3>
+              <p class="muted">Материал открыт участникам с активным статусом. Внутри — серия изображений, голосовое сопровождение и комментарии автора.</p>
+              <div class="post-media"></div>
+              <div class="post-actions">
+                <span>❤️ 42</span>
+                <span>💬 18</span>
+                <span>🎁 7</span>
+                <span>Закрыто</span>
+              </div>
+            </article>
 
-      <article class="post-card card glass">
-        <div class="post-head">
-          <strong>Круг Байкала</strong>
-          <span class="post-badge free">открыто</span>
-        </div>
-        <h3>Открытая лента для всех участников</h3>
-        <p class="muted">Здесь участники читают публикации, обсуждают события круга и поддерживают авторов подарками и реакциями.</p>
-        <div class="post-actions">
-          <span>🔥 27</span>
-          <span>💬 12</span>
-          <span>🖼 4</span>
-        </div>
-      </article>
+            <article class="post-card card glass">
+              <div class="post-head">
+                <strong>Круг Байкала</strong>
+                <span class="post-badge free">открыто</span>
+              </div>
+              <h3>Открытая лента для всех участников</h3>
+              <p class="muted">Здесь участники читают публикации, обсуждают события круга и поддерживают авторов подарками и реакциями.</p>
+              <div class="post-actions">
+                <span>🔥 27</span>
+                <span>💬 12</span>
+                <span>🖼 4</span>
+              </div>
+            </article>
 
-      <article class="post-card card glass locked-post">
-        <div class="post-head">
-          <strong>Хранитель озера</strong>
-          <span class="post-badge">за токены</span>
-        </div>
-        <h3>Закрытый круг на выходные</h3>
-        <p class="muted">Участие открывается по статусу участника или после отдельного доступа. Внутри — личная встреча и закрытое обсуждение.</p>
-        <div class="post-actions">
-          <span>🎥 Встреча круга</span>
-          <span>🕒 Суббота, 20:00</span>
-        </div>
-      </article>
+            <article class="post-card card glass locked-post">
+              <div class="post-head">
+                <strong>Хранитель озера</strong>
+                <span class="post-badge">за токены</span>
+              </div>
+              <h3>Закрытый круг на выходные</h3>
+              <p class="muted">Участие открывается по статусу участника или после отдельного доступа. Внутри — личная встреча и закрытое обсуждение.</p>
+              <div class="post-actions">
+                <span>🎥 Встреча круга</span>
+                <span>🕒 Суббота, 20:00</span>
+              </div>
+            </article>
 
-      <article class="post-card card glass">
-        <div class="post-head">
-          <strong>Лада</strong>
-          <span class="post-badge free">автор</span>
+            <article class="post-card card glass">
+              <div class="post-head">
+                <strong>Лада</strong>
+                <span class="post-badge free">автор</span>
+              </div>
+              <h3>Новые изображения для вечернего круга</h3>
+              <p class="muted">Подборка визуальных материалов для следующей встречи. Комментарии открыты для всех участников сообщества.</p>
+              <div class="post-media small-media"></div>
+              <div class="post-actions">
+                <span>🌿 15</span>
+                <span>💬 9</span>
+                <span>🎁 2</span>
+              </div>
+            </article>
+          </div>
         </div>
-        <h3>Новые изображения для вечернего круга</h3>
-        <p class="muted">Подборка визуальных материалов для следующей встречи. Комментарии открыты для всех участников сообщества.</p>
-        <div class="post-media small-media"></div>
-        <div class="post-actions">
-          <span>🌿 15</span>
-          <span>💬 9</span>
-          <span>🎁 2</span>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+      </section>
 
-      <!-- RU: Экран видеозвонков. -->
+      <!-- RU: Экран звонков. -->
       <!-- EN: Calls screen. -->
       <section class="view" id="view-calls">
-  <!-- RU: Экран личных и групповых встреч внутри платформы. -->
-  <!-- EN: Screen for private and group meetings inside the platform. -->
-  <div class="hero-head">
-    <div>
-      <div class="eyebrow">Meetings</div>
-      <h1>Личные и групповые звонки</h1>
-      <p class="muted">Пространство для личных встреч, закрытых кругов и совместных бесед внутри сообщества.</p>
-    </div>
-  </div>
-
-  <div class="calls-grid">
-    <!-- RU: Блок подготовки ко входу во встречу. -->
-    <!-- EN: Join preparation block before entering a meeting. -->
-    <article class="call-panel card glass soft-glow">
-      <div class="panel-head">
-        <div>
-          <h3>Подготовка ко входу</h3>
-          <div class="tiny muted">Проверьте камеру, звук и формат участия</div>
-        </div>
-      </div>
-
-      <div class="call-preview">
-        <div class="call-stage">Ваше пространство встречи</div>
-        <div class="call-options">
-          <span class="chip active">Камера</span>
-          <span class="chip active">Микрофон</span>
-          <span class="chip">Фон</span>
-        </div>
-      </div>
-
-      <div class="call-actions">
-        <button class="primary-btn">Войти во встречу</button>
-        <button class="secondary-btn">Запланировать</button>
-      </div>
-    </article>
-
-    <!-- RU: Блок с доступом и форматами участия. -->
-    <!-- EN: Access rules and participation formats block. -->
-    <article class="call-panel card glass">
-      <div class="panel-head">
-        <div>
-          <h3>Форматы доступа</h3>
-          <div class="tiny muted">Участие зависит от статуса и роли внутри платформы</div>
-        </div>
-      </div>
-
-      <div class="access-list">
-        <div class="access-row">
-          <span>Личные встречи</span>
-          <strong>доступно участникам с расширенным статусом</strong>
-        </div>
-        <div class="access-row">
-          <span>Закрытые круги</span>
-          <strong>по приглашению и внутреннему статусу</strong>
-        </div>
-        <div class="access-row">
-          <span>Групповые беседы</span>
-          <strong>для ведущих и приглашённых участников</strong>
-        </div>
-      </div>
-    </article>
-
-    <!-- RU: Блок сценариев звонков. -->
-    <!-- EN: Meeting scenario cards block. -->
-    <article class="call-panel card glass wide">
-      <div class="panel-head">
-        <div>
-          <h3>Сценарии встреч</h3>
-          <div class="tiny muted">Разные форматы общения внутри одного продукта</div>
-        </div>
-      </div>
-
-      <div class="scene-grid">
-        <div class="scene-card">
-          <div class="scene-screen dark">Личная встреча</div>
-          <div class="tiny muted">Приватный разговор между двумя участниками</div>
-        </div>
-
-        <div class="scene-card">
-          <div class="scene-screen dark">Круг участников</div>
-          <div class="tiny muted">Совместное обсуждение в закрытом пространстве</div>
-        </div>
-
-        <div class="scene-card">
-          <div class="scene-screen locked">Доступ ограничен</div>
-          <div class="tiny muted">Расширенный вход зависит от уровня доступа</div>
-        </div>
-      </div>
-    </article>
-
-    <!-- RU: Блок предстоящих встреч. -->
-    <!-- EN: Upcoming meetings block. -->
-    <article class="call-panel card glass wide">
-      <div class="panel-head">
-        <div>
-          <h3>Предстоящие встречи</h3>
-          <div class="tiny muted">Календарь закрытых и личных созвонов</div>
-        </div>
-      </div>
-
-      <div class="meeting-list">
-        <div class="meeting-item">
+        <div class="hero-head">
           <div>
-            <strong>Вечерний круг у воды</strong>
-            <div class="tiny muted">Сегодня · 20:00</div>
+            <div class="eyebrow">Meetings</div>
+            <h1>Личные и групповые звонки</h1>
+            <p class="muted">Пространство для личных встреч, закрытых кругов и совместных бесед внутри сообщества.</p>
           </div>
-          <span class="tag premium">по подписке</span>
         </div>
 
-        <div class="meeting-item">
-          <div>
-            <strong>Личная встреча с наставником</strong>
-            <div class="tiny muted">Завтра · 12:30</div>
-          </div>
-          <span class="tag">личная</span>
-        </div>
+        <div class="calls-grid">
+          <article class="call-panel card glass soft-glow">
+            <div class="panel-head">
+              <div>
+                <h3>Подготовка ко входу</h3>
+                <div class="tiny muted">Проверьте камеру, звук и формат участия</div>
+              </div>
+            </div>
 
-        <div class="meeting-item">
-          <div>
-            <strong>Закрытая беседа ведущих</strong>
-            <div class="tiny muted">Суббота · 18:00</div>
-          </div>
-          <span class="tag">закрыто</span>
-        </div>
-      </div>
-    </article>
-  </div>
-</section>
+            <div class="call-preview">
+              <div class="call-stage">Ваше пространство встречи</div>
+              <div class="call-options">
+                <span class="chip active">Камера</span>
+                <span class="chip active">Микрофон</span>
+                <span class="chip">Фон</span>
+              </div>
+            </div>
 
-      <!-- RU: Экран кошелька и premium-функций. -->
-      <!-- EN: Wallet and premium features screen. -->
+            <div class="call-actions">
+              <button class="primary-btn">Войти во встречу</button>
+              <button class="secondary-btn">Запланировать</button>
+            </div>
+          </article>
+
+          <article class="call-panel card glass">
+            <div class="panel-head">
+              <div>
+                <h3>Форматы доступа</h3>
+                <div class="tiny muted">Участие зависит от статуса и роли внутри платформы</div>
+              </div>
+            </div>
+
+            <div class="access-list">
+              <div class="access-row">
+                <span>Личные встречи</span>
+                <strong>доступно участникам с расширенным статусом</strong>
+              </div>
+              <div class="access-row">
+                <span>Закрытые круги</span>
+                <strong>по приглашению и внутреннему статусу</strong>
+              </div>
+              <div class="access-row">
+                <span>Групповые беседы</span>
+                <strong>для ведущих и приглашённых участников</strong>
+              </div>
+            </div>
+          </article>
+
+          <article class="call-panel card glass wide">
+            <div class="panel-head">
+              <div>
+                <h3>Сценарии встреч</h3>
+                <div class="tiny muted">Разные форматы общения внутри одного продукта</div>
+              </div>
+            </div>
+
+            <div class="scene-grid">
+              <div class="scene-card">
+                <div class="scene-screen dark">Личная встреча</div>
+                <div class="tiny muted">Приватный разговор между двумя участниками</div>
+              </div>
+
+              <div class="scene-card">
+                <div class="scene-screen dark">Круг участников</div>
+                <div class="tiny muted">Совместное обсуждение в закрытом пространстве</div>
+              </div>
+
+              <div class="scene-card">
+                <div class="scene-screen locked">Доступ ограничен</div>
+                <div class="tiny muted">Расширенный вход зависит от уровня доступа</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="call-panel card glass wide">
+            <div class="panel-head">
+              <div>
+                <h3>Предстоящие встречи</h3>
+                <div class="tiny muted">Календарь закрытых и личных созвонов</div>
+              </div>
+            </div>
+
+            <div class="meeting-list">
+              <div class="meeting-item">
+                <div>
+                  <strong>Вечерний круг у воды</strong>
+                  <div class="tiny muted">Сегодня · 20:00</div>
+                </div>
+                <span class="tag premium">по подписке</span>
+              </div>
+
+              <div class="meeting-item">
+                <div>
+                  <strong>Личная встреча с наставником</strong>
+                  <div class="tiny muted">Завтра · 12:30</div>
+                </div>
+                <span class="tag">личная</span>
+              </div>
+
+              <div class="meeting-item">
+                <div>
+                  <strong>Закрытая беседа ведущих</strong>
+                  <div class="tiny muted">Суббота · 18:00</div>
+                </div>
+                <span class="tag">закрыто</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- RU: Экран кошелька. -->
+      <!-- EN: Wallet screen. -->
       <section class="view" id="view-wallet">
-  <!-- RU: Экран внутренней валюты, подписки и поддержки авторов. -->
-  <!-- EN: Screen for internal currency, subscription, and creator support. -->
-  <div class="hero-head">
-    <div>
-      <div class="eyebrow">Wallet</div>
-      <h1>Токены и возможности доступа</h1>
-      <p class="muted">Баланс, подписка, подарки, поддержка авторов и история открытых материалов внутри платформы.</p>
-    </div>
-  </div>
-
-  <div class="wallet-grid">
-    <!-- RU: Карточка текущего баланса. -->
-    <!-- EN: Current balance card. -->
-    <article class="wallet-panel card glass soft-glow">
-      <div class="tiny muted">Ваш баланс</div>
-      <div class="balance">1 280 духовных токенов</div>
-
-      <div class="wallet-line">
-        <span>Поддержка авторов</span>
-        <strong>184</strong>
-      </div>
-      <div class="wallet-line">
-        <span>Открытые материалы</span>
-        <strong>92</strong>
-      </div>
-
-      <div class="wallet-actions">
-        <button class="primary-btn">Пополнить баланс</button>
-        <button class="secondary-btn">История операций</button>
-      </div>
-    </article>
-
-    <!-- RU: Карточка статуса участия. -->
-    <!-- EN: Membership status card. -->
-    <article class="wallet-panel card glass">
-      <div class="tiny muted">Статус участия</div>
-      <div class="balance">Активен до 30 июня</div>
-
-      <div class="wallet-line">
-        <span>Публикации в ленте</span>
-        <strong>доступно</strong>
-      </div>
-      <div class="wallet-line">
-        <span>Закрытые встречи</span>
-        <strong>доступно</strong>
-      </div>
-      <div class="wallet-line">
-        <span>Личные встречи</span>
-        <strong>доступно</strong>
-      </div>
-
-      <div class="wallet-actions">
-        <button class="secondary-btn">Управление статусом</button>
-      </div>
-    </article>
-
-    <!-- RU: Блок экономики платформы. -->
-    <!-- EN: Platform economy overview block. -->
-    <article class="wallet-panel card glass wide-wallet">
-      <div class="panel-head">
-        <div>
-          <h3>Внутренняя экономика платформы</h3>
-          <div class="tiny muted">Как участники используют токены и дополнительные возможности</div>
-        </div>
-      </div>
-
-      <div class="monet-grid">
-        <div class="monet-card">Подписка</div>
-        <div class="monet-card">Подарки</div>
-        <div class="monet-card">Поддержка авторов</div>
-        <div class="monet-card">Открытие материалов</div>
-        <div class="monet-card">Закрытые встречи</div>
-        <div class="monet-card">Особые публикации</div>
-      </div>
-    </article>
-
-    <!-- RU: История активности внутри кошелька. -->
-    <!-- EN: Wallet activity history block. -->
-    <article class="wallet-panel card glass wide-wallet">
-      <div class="panel-head">
-        <div>
-          <h3>Последняя активность</h3>
-          <div class="tiny muted">Недавние действия по балансу и доступу</div>
-        </div>
-      </div>
-
-      <div class="wallet-history">
-        <div class="history-item">
+        <div class="hero-head">
           <div>
-            <strong>Открыт закрытый материал</strong>
-            <div class="tiny muted">Сегодня · 09:20</div>
+            <div class="eyebrow">Wallet</div>
+            <h1>Токены и возможности доступа</h1>
+            <p class="muted">Баланс, подписка, подарки, поддержка авторов и история открытых материалов внутри платформы.</p>
           </div>
-          <span class="history-value minus">−5</span>
         </div>
 
-        <div class="history-item">
-          <div>
-            <strong>Подарок автору</strong>
-            <div class="tiny muted">Вчера · 21:14</div>
-          </div>
-          <span class="history-value minus">−12</span>
-        </div>
+        <div class="wallet-grid">
+          <article class="wallet-panel card glass soft-glow">
+            <div class="tiny muted">Ваш баланс</div>
+            <div class="balance">1 280 духовных токенов</div>
 
-        <div class="history-item">
-          <div>
-            <strong>Пополнение баланса</strong>
-            <div class="tiny muted">Вчера · 14:02</div>
-          </div>
-          <span class="history-value plus">+150</span>
+            <div class="wallet-line">
+              <span>Поддержка авторов</span>
+              <strong>184</strong>
+            </div>
+            <div class="wallet-line">
+              <span>Открытые материалы</span>
+              <strong>92</strong>
+            </div>
+
+            <div class="wallet-actions">
+              <button class="primary-btn">Пополнить баланс</button>
+              <button class="secondary-btn">История операций</button>
+            </div>
+          </article>
+
+          <article class="wallet-panel card glass">
+            <div class="tiny muted">Статус участия</div>
+            <div class="balance">Активен до 30 июня</div>
+
+            <div class="wallet-line">
+              <span>Публикации в ленте</span>
+              <strong>доступно</strong>
+            </div>
+            <div class="wallet-line">
+              <span>Закрытые встречи</span>
+              <strong>доступно</strong>
+            </div>
+            <div class="wallet-line">
+              <span>Личные встречи</span>
+              <strong>доступно</strong>
+            </div>
+
+            <div class="wallet-actions">
+              <button class="secondary-btn">Управление статусом</button>
+            </div>
+          </article>
+
+          <article class="wallet-panel card glass wide-wallet">
+            <div class="panel-head">
+              <div>
+                <h3>Внутренняя экономика платформы</h3>
+                <div class="tiny muted">Как участники используют токены и дополнительные возможности</div>
+              </div>
+            </div>
+
+            <div class="monet-grid">
+              <div class="monet-card">Подписка</div>
+              <div class="monet-card">Подарки</div>
+              <div class="monet-card">Поддержка авторов</div>
+              <div class="monet-card">Открытие материалов</div>
+              <div class="monet-card">Закрытые встречи</div>
+              <div class="monet-card">Особые публикации</div>
+            </div>
+          </article>
+
+          <article class="wallet-panel card glass wide-wallet">
+            <div class="panel-head">
+              <div>
+                <h3>Последняя активность</h3>
+                <div class="tiny muted">Недавние действия по балансу и доступу</div>
+              </div>
+            </div>
+
+            <div class="wallet-history">
+              <div class="history-item">
+                <div>
+                  <strong>Открыт закрытый материал</strong>
+                  <div class="tiny muted">Сегодня · 09:20</div>
+                </div>
+                <span class="history-value minus">−5</span>
+              </div>
+
+              <div class="history-item">
+                <div>
+                  <strong>Подарок автору</strong>
+                  <div class="tiny muted">Вчера · 21:14</div>
+                </div>
+                <span class="history-value minus">−12</span>
+              </div>
+
+              <div class="history-item">
+                <div>
+                  <strong>Пополнение баланса</strong>
+                  <div class="tiny muted">Вчера · 14:02</div>
+                </div>
+                <span class="history-value plus">+150</span>
+              </div>
+            </div>
+          </article>
         </div>
-      </div>
-    </article>
-  </div>
-</section>
+      </section>
 
       <!-- RU: Экран профиля. -->
       <!-- EN: Profile screen. -->
       <section class="view" id="view-profile">
-  <!-- RU: Экран профиля участника, статуса, ролей и персональных настроек. -->
-  <!-- EN: Member profile screen with status, roles, and personal settings. -->
-  <div class="hero-head">
-    <div>
-      <div class="eyebrow">Profile</div>
-      <h1>Профиль и статус участника</h1>
-      <p class="muted">Роль в системе, уровень доступа, персональный образ и основные настройки внутри платформы.</p>
-    </div>
-  </div>
-
-  <div class="profile-layout">
-    <!-- RU: Главная карточка профиля участника. -->
-    <!-- EN: Main member profile card. -->
-    <article class="profile-panel card glass soft-glow">
-      <div class="profile-main">
-        <div class="avatar big">BK</div>
-        <div>
-          <h3>Хранитель Байкала</h3>
-          <p class="muted">Куратор сообщества, ведущий закрытых встреч и автор материалов для внутреннего круга.</p>
-          <div class="tag-row">
-            <span class="tag premium">расширенный статус</span>
-            <span class="tag">администратор</span>
-            <span class="tag">ведущий</span>
+        <div class="hero-head">
+          <div>
+            <div class="eyebrow">Profile</div>
+            <h1>Профиль и статус участника</h1>
+            <p class="muted">Роль в системе, уровень доступа, персональный образ и основные настройки внутри платформы.</p>
           </div>
         </div>
-      </div>
-    </article>
 
-    <!-- RU: Права и доступы. -->
-    <!-- EN: Permissions and access overview. -->
-    <article class="profile-detail card glass">
-      <div class="panel-head">
-        <div>
-          <h3>Возможности участия</h3>
-          <div class="tiny muted">Что доступно этому профилю внутри платформы</div>
-        </div>
-      </div>
+        <div class="profile-layout">
+          <article class="profile-panel card glass soft-glow">
+            <div class="profile-main">
+              <div class="avatar big">BK</div>
+              <div>
+                <h3>Хранитель Байкала</h3>
+                <p class="muted">Куратор сообщества, ведущий закрытых встреч и автор материалов для внутреннего круга.</p>
+                <div class="tag-row">
+                  <span class="tag premium">расширенный статус</span>
+                  <span class="tag">администратор</span>
+                  <span class="tag">ведущий</span>
+                </div>
+              </div>
+            </div>
+          </article>
 
-      <div class="access-list">
-        <div class="access-row">
-          <span>Публикации в ленте</span>
-          <strong>доступно</strong>
-        </div>
-        <div class="access-row">
-          <span>Закрытые встречи</span>
-          <strong>доступно</strong>
-        </div>
-        <div class="access-row">
-          <span>Управление кругами</span>
-          <strong>доступно</strong>
-        </div>
-        <div class="access-row">
-          <span>Поддержка авторов</span>
-          <strong>активно</strong>
-        </div>
-      </div>
-    </article>
+          <article class="profile-detail card glass">
+            <div class="panel-head">
+              <div>
+                <h3>Возможности участия</h3>
+                <div class="tiny muted">Что доступно этому профилю внутри платформы</div>
+              </div>
+            </div>
 
-    <!-- RU: Карточка визуального образа профиля. -->
-    <!-- EN: Profile identity and presentation card. -->
-    <article class="profile-detail card glass wide-profile">
-      <div class="panel-head">
-        <div>
-          <h3>Образ участника</h3>
-          <div class="tiny muted">Публичное описание и визуальная идентичность профиля</div>
-        </div>
-      </div>
+            <div class="access-list">
+              <div class="access-row">
+                <span>Публикации в ленте</span>
+                <strong>доступно</strong>
+              </div>
+              <div class="access-row">
+                <span>Закрытые встречи</span>
+                <strong>доступно</strong>
+              </div>
+              <div class="access-row">
+                <span>Управление кругами</span>
+                <strong>доступно</strong>
+              </div>
+              <div class="access-row">
+                <span>Поддержка авторов</span>
+                <strong>активно</strong>
+              </div>
+            </div>
+          </article>
 
-      <div class="profile-identity">
-        <div class="identity-card">
-          <span class="tiny muted">Стиль профиля</span>
-          <strong>Тёплый, закрытый, созерцательный</strong>
-        </div>
-        <div class="identity-card">
-          <span class="tiny muted">Основная роль</span>
-          <strong>Ведущий закрытых кругов</strong>
-        </div>
-        <div class="identity-card">
-          <span class="tiny muted">Материалы</span>
-          <strong>Публикации, встречи, голосовые практики</strong>
-        </div>
-      </div>
-    </article>
+          <article class="profile-detail card glass wide-profile">
+            <div class="panel-head">
+              <div>
+                <h3>Образ участника</h3>
+                <div class="tiny muted">Публичное описание и визуальная идентичность профиля</div>
+              </div>
+            </div>
 
-    <!-- RU: Блок настроек и персонального управления. -->
-    <!-- EN: Settings and personal control block. -->
-    <article class="profile-detail card glass wide-profile">
-      <div class="panel-head">
-        <div>
-          <h3>Настройки профиля</h3>
-          <div class="tiny muted">Базовые направления персонального управления</div>
-        </div>
-      </div>
+            <div class="profile-identity">
+              <div class="identity-card">
+                <span class="tiny muted">Стиль профиля</span>
+                <strong>Тёплый, закрытый, созерцательный</strong>
+              </div>
+              <div class="identity-card">
+                <span class="tiny muted">Основная роль</span>
+                <strong>Ведущий закрытых кругов</strong>
+              </div>
+              <div class="identity-card">
+                <span class="tiny muted">Материалы</span>
+                <strong>Публикации, встречи, голосовые практики</strong>
+              </div>
+            </div>
+          </article>
 
-      <div class="settings-grid">
-        <div class="setting-card">Внешний вид профиля</div>
-        <div class="setting-card">Приватность</div>
-        <div class="setting-card">Уведомления</div>
-        <div class="setting-card">Статус участия</div>
-      </div>
-    </article>
-  </div>
-</section>
+          <article class="profile-detail card glass wide-profile">
+            <div class="panel-head">
+              <div>
+                <h3>Настройки профиля</h3>
+                <div class="tiny muted">Базовые направления персонального управления</div>
+              </div>
+            </div>
+
+            <div class="settings-grid">
+              <div class="setting-card">Внешний вид профиля</div>
+              <div class="setting-card">Приватность</div>
+              <div class="setting-card">Уведомления</div>
+              <div class="setting-card">Статус участия</div>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
   </div>
 
