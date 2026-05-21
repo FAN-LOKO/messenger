@@ -6,30 +6,38 @@
   <meta name="theme-color" content="#0f5f67" />
   <meta name="description" content="Baikal Messenger v2 — PWA community platform prototype." />
 
-  /manifest.webmanifest" />
+  <!-- RU: Manifest для PWA-режима и установки приложения. -->
+  <!-- EN: Manifest for PWA mode and installable application behavior. -->
+  <link rel="manifest" href="./manifest.webmanifest" />
 
-  //api.fontshare.com" />
-  //api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet" />
+  <!-- RU: Подключение шрифта проекта. -->
+  <!-- EN: Project font connection. -->
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet" />
 
-  /src/styles/style.css" />
-  /src/styles/layout.css" />
-  /src/styles/components.css" />
-  /src/styles/chat.css" />
-  /src/styles/feed.css" />
-  /src/styles/calls.css" />
-  /src/styles/wallet.css" />
-  /src/styles/profile.css" />
-  /src/styles/onboarding.css" />
-  /src/styles/premium.css" />
-  /src/styles/media.css" />
-  /src/styles/search.css" />
-  /src/styles/admin.css" />
-  /src/styles/tokens.css" />
-  /src/styles/responsive.css" />
+  <!-- RU: Базовые и модульные стили интерфейса. -->
+  <!-- EN: Base and modular interface styles. -->
+  <link rel="stylesheet" href="./src/styles/style.css" />
+  <link rel="stylesheet" href="./src/styles/layout.css" />
+  <link rel="stylesheet" href="./src/styles/components.css" />
+  <link rel="stylesheet" href="./src/styles/chat.css" />
+  <link rel="stylesheet" href="./src/styles/feed.css" />
+  <link rel="stylesheet" href="./src/styles/calls.css" />
+  <link rel="stylesheet" href="./src/styles/wallet.css" />
+  <link rel="stylesheet" href="./src/styles/profile.css" />
+  <link rel="stylesheet" href="./src/styles/onboarding.css" />
+  <link rel="stylesheet" href="./src/styles/premium.css" />
+  <link rel="stylesheet" href="./src/styles/media.css" />
+  <link rel="stylesheet" href="./src/styles/search.css" />
+  <link rel="stylesheet" href="./src/styles/admin.css" />
+  <link rel="stylesheet" href="./src/styles/tokens.css" />
+  <link rel="stylesheet" href="./src/styles/responsive.css" />
 
   <title>Baikal Messenger v2</title>
 </head>
 <body>
+  <!-- RU: Главная оболочка приложения. -->
+  <!-- EN: Main application shell. -->
   <div class="app-shell">
     <aside class="sidebar glass card">
       <div class="brand-row card glass soft-glow">
@@ -55,31 +63,20 @@
         </div>
       </div>
 
+      <!-- RU: Главная навигация между режимами продукта. -->
+      <!-- EN: Main navigation between product modes. -->
       <nav class="mode-nav">
-        <button class="mode-link active" data-view="chats">
-          <span class="mode-icon">✦</span>
-          <span>Чаты</span>
-        </button>
-        <button class="mode-link" data-view="feed">
-          <span class="mode-icon">≈</span>
-          <span>Лента</span>
-        </button>
-        <button class="mode-link" data-view="calls">
-          <span class="mode-icon">◉</span>
-          <span>Звонки</span>
-        </button>
-        <button class="mode-link" data-view="wallet">
-          <span class="mode-icon">◈</span>
-          <span>Кошелёк</span>
-        </button>
-        <button class="mode-link" data-view="profile">
-          <span class="mode-icon">⌂</span>
-          <span>Профиль</span>
-        </button>
+        <button class="mode-link active" data-view="chats"><span>Чаты</span></button>
+        <button class="mode-link" data-view="feed"><span>Лента</span></button>
+        <button class="mode-link" data-view="calls"><span>Звонки</span></button>
+        <button class="mode-link" data-view="wallet"><span>Кошелёк</span></button>
+        <button class="mode-link" data-view="profile"><span>Профиль</span></button>
       </nav>
     </aside>
 
     <main class="workspace">
+      <!-- RU: Экран чатов. -->
+      <!-- EN: Chats screen. -->
       <section class="view view-active" id="view-chats">
         <div class="hero-head">
           <div>
@@ -231,6 +228,8 @@
         </div>
       </section>
 
+      <!-- RU: Экран ленты постов. -->
+      <!-- EN: Feed screen. -->
       <section class="view" id="view-feed">
         <div class="hero-head">
           <div>
@@ -320,6 +319,8 @@
         </div>
       </section>
 
+      <!-- RU: Экран звонков. -->
+      <!-- EN: Calls screen. -->
       <section class="view" id="view-calls">
         <div class="hero-head">
           <div>
@@ -440,6 +441,8 @@
         </div>
       </section>
 
+      <!-- RU: Экран кошелька. -->
+      <!-- EN: Wallet screen. -->
       <section class="view" id="view-wallet">
         <div class="hero-head">
           <div>
@@ -546,6 +549,8 @@
         </div>
       </section>
 
+      <!-- RU: Экран профиля. -->
+      <!-- EN: Profile screen. -->
       <section class="view" id="view-profile">
         <div class="hero-head">
           <div>
@@ -643,6 +648,8 @@
     </main>
   </div>
 
+  <!-- RU: Подключение модульных скриптов приложения. -->
+  <!-- EN: Connecting modular application scripts. -->
   <script src="./src/scripts/router.js"></script>
   <script src="./src/scripts/app.js"></script>
   <script src="./src/scripts/chat.js"></script>
