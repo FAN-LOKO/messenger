@@ -74,19 +74,161 @@
       <!-- RU: Экран чатов. -->
       <!-- EN: Chats screen. -->
       <section class="view view-active" id="view-chats">
-        <div class="hero-head">
-          <div>
-            <div class="eyebrow">Messenger mode</div>
-            <h1>Чаты и внутренние круги</h1>
-            <p class="muted">Личные диалоги, групповые комнаты, голосовые сообщения и premium-гейтинг.</p>
-          </div>
-        </div>
+  <!-- RU: Основной экран чатов с комнатами, сообщениями и composer. -->
+  <!-- EN: Main chats screen with rooms, messages, and composer. -->
+  <div class="hero-head">
+    <div>
+      <div class="eyebrow">Messenger mode</div>
+      <h1>Чаты и внутренние круги</h1>
+      <p class="muted">Личные диалоги, групповые комнаты, голосовые сообщения, реакции и premium-гейтинг внутри сообщества.</p>
+    </div>
+  </div>
 
-        <article class="feature-card card glass">
-          <h3>Chats scaffold</h3>
-          <p class="muted">На следующем шаге сюда перенесём полноценный chat layout со списком комнат, сообщениями и composer.</p>
+  <div class="chat-shell">
+    <!-- RU: Левая колонка со списком комнат. -->
+    <!-- EN: Left column with room list. -->
+    <aside class="chat-list-panel card glass">
+      <div class="panel-head">
+        <div>
+          <h3>Комнаты</h3>
+          <div class="tiny muted">14 активных пространств</div>
+        </div>
+        <button class="icon-btn" aria-label="Создать комнату / Create room">＋</button>
+      </div>
+
+      <div class="room-list">
+        <article class="room-item active">
+          <div class="avatar small">Б</div>
+          <div class="room-content">
+            <div class="room-top">
+              <strong>Круг Байкала</strong>
+              <span class="tiny muted">10:03</span>
+            </div>
+            <p class="muted">Новый закрытый голосовой ритуал уже доступен.</p>
+            <div class="tag-row">
+              <span class="tag premium">premium</span>
+              <span class="tag">group</span>
+            </div>
+          </div>
         </article>
-      </section>
+
+        <article class="room-item">
+          <div class="avatar small">Л</div>
+          <div class="room-content">
+            <div class="room-top">
+              <strong>Ледяной берег</strong>
+              <span class="tiny muted">09:41</span>
+            </div>
+            <p class="muted">3 новых комментария и 1 подарок автору.</p>
+            <div class="tag-row">
+              <span class="tag">feed-linked</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="room-item">
+          <div class="avatar small">А</div>
+          <div class="room-content">
+            <div class="room-top">
+              <strong>Алтанай</strong>
+              <span class="tiny muted">вчера</span>
+            </div>
+            <p class="muted">Отправила изображения для платной публикации.</p>
+          </div>
+        </article>
+
+        <article class="room-item">
+          <div class="avatar small">О</div>
+          <div class="room-content">
+            <div class="room-top">
+              <strong>Огни шамана</strong>
+              <span class="tiny muted">вчера</span>
+            </div>
+            <p class="muted">Планируется видеокруг для premium и admin.</p>
+            <div class="tag-row">
+              <span class="tag">calls</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </aside>
+
+    <!-- RU: Правая колонка с активным чатом. -->
+    <!-- EN: Right column with active chat view. -->
+    <section class="chat-main card glass">
+      <div class="chat-main-top">
+        <div>
+          <h3>Круг Байкала</h3>
+          <div class="tiny muted">12 участников · 3 ведущих · offline sync active</div>
+        </div>
+        <div class="chat-top-actions">
+          <button class="icon-btn" aria-label="Голосовое / Voice">🎙</button>
+          <button class="icon-btn" aria-label="Изображение / Image">🖼</button>
+          <button class="icon-btn" aria-label="Ритуал / Ritual">✦</button>
+        </div>
+      </div>
+
+      <div class="chat-banner card glass">
+        <span>Offline-ready history enabled</span>
+        <span class="tiny muted">Сообщения синхронизируются после восстановления сети</span>
+      </div>
+
+      <div class="message-list">
+        <article class="message-bubble">
+          <div class="tiny muted">Алтанай · moderator</div>
+          <p>Открыла новый premium-ритуал. Доступ по подписке или за 5 духовных токенов.</p>
+          <div class="message-meta">
+            <span>🔥 6 · 💎 3</span>
+            <span>10:01 · delivered</span>
+          </div>
+        </article>
+
+        <article class="message-bubble self">
+          <p>Для заказчика важно показать единый слой: чат, платный контент, voice, подарки и доступ к звонкам для admin и premium.</p>
+          <div class="message-meta">
+            <span>✨ 4</span>
+            <span>10:03 · read</span>
+          </div>
+        </article>
+
+        <article class="message-bubble voice-bubble">
+          <div class="tiny muted">Хранитель озера · premium guide</div>
+          <div class="voice-line">
+            <button class="play-btn" aria-label="Воспроизвести / Play">▶</button>
+            <div class="voice-wave">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <span class="tiny muted">01:42</span>
+          </div>
+          <div class="message-meta">
+            <span>🎧 11 · 🙏 5</span>
+            <span>premium unlock</span>
+          </div>
+        </article>
+
+        <article class="message-bubble">
+          <div class="tiny muted">Лада · user</div>
+          <p>Нужно ещё показать, что лента постов существует отдельно, а не смешана с чатами.</p>
+          <div class="message-meta">
+            <span>💬 2</span>
+            <span>10:05 · seen</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="composer card glass">
+        <button class="icon-btn" aria-label="Emoji / Emoji">☺</button>
+        <textarea placeholder="Напишите сообщение, отправьте изображение или запишите голосовой ритуал..."></textarea>
+        <button class="recording" type="button">● REC</button>
+        <button class="primary-btn compact" type="button">Отправить</button>
+      </div>
+    </section>
+  </div>
+</section>
 
       <!-- RU: Экран ленты постов. -->
       <!-- EN: Feed screen. -->
