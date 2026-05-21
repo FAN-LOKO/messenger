@@ -1,5 +1,8 @@
 # Screen Map
 
+> RU: Карта экранов продукта и основных режимов интерфейса.
+> EN: Map of product screens and primary interface modes.
+
 ## Core modes
 - Chats
 - Feed
