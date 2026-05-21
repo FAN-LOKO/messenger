@@ -1,5 +1,5 @@
-/* RU: Пространственная система проекта: compact layout + collapsible sidebar. */
-/* EN: Spatial system of the project: compact layout + collapsible sidebar. */
+/* RU: Пространственная система проекта: compact layout + Baikal atmosphere. */
+/* EN: Spatial system of the project: compact layout + Baikal atmosphere. */
 
 .app-shell {
   display: grid;
@@ -15,25 +15,41 @@
 }
 
 .sidebar {
+  position: relative;
   border-radius: 24px;
   padding: 14px;
   display: flex;
   flex-direction: column;
   gap: 12px;
   background:
-    linear-gradient(180deg, rgba(255,255,255,.025), rgba(255,255,255,.008)),
+    linear-gradient(180deg, rgba(255,255,255,.022), rgba(255,255,255,.008)),
+    linear-gradient(180deg, rgba(103,185,181,.025), rgba(214,167,108,.02)),
     var(--color-panel-strong);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-md);
   overflow: hidden;
 }
 
+.sidebar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(156,228,221,.08), transparent 24%),
+    radial-gradient(circle at 82% 100%, rgba(214,167,108,.06), transparent 28%);
+  opacity: .9;
+}
+
 .workspace {
+  position: relative;
+  overflow: hidden;
   border-radius: 26px;
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-lg);
   background:
     linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.012)),
+    linear-gradient(135deg, rgba(103,185,181,.028), transparent 38%),
     var(--color-panel-strong);
   padding: 22px;
   display: flex;
@@ -41,12 +57,44 @@
   gap: 20px;
 }
 
+.workspace::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 72% 14%, rgba(103,185,181,.08), transparent 16%),
+    radial-gradient(circle at 18% 84%, rgba(214,167,108,.05), transparent 20%),
+    radial-gradient(circle at 48% 102%, rgba(156,228,221,.04), transparent 24%);
+  opacity: .95;
+}
+
+.workspace::after {
+  content: "";
+  position: absolute;
+  right: -120px;
+  top: -120px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  pointer-events: none;
+  border: 1px solid rgba(156,228,221,.06);
+  box-shadow:
+    0 0 0 24px rgba(156,228,221,.025),
+    0 0 0 56px rgba(156,228,221,.015),
+    0 0 0 92px rgba(214,167,108,.012);
+  opacity: .75;
+}
+
 .brand-row,
 .profile-card {
+  position: relative;
+  z-index: 1;
   border-radius: 18px;
   padding: 12px;
   background:
     linear-gradient(180deg, rgba(255,255,255,.026), rgba(255,255,255,.01)),
+    linear-gradient(135deg, rgba(103,185,181,.018), transparent 55%),
     var(--color-panel);
 }
 
@@ -81,6 +129,8 @@
 }
 
 .mode-nav {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -110,12 +160,14 @@
   transform: translateX(2px);
   background:
     linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.014)),
-    transparent;
+    linear-gradient(135deg, rgba(103,185,181,.02), transparent 55%);
   border-color: var(--color-border);
 }
 
 .mode-link.active {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-2));
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.14), transparent 32%),
+    linear-gradient(135deg, var(--color-primary), var(--color-primary-2));
   color: #fff;
   border-color: transparent;
   box-shadow:
@@ -124,6 +176,8 @@
 }
 
 .hero-head {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   gap: 18px;
@@ -139,12 +193,14 @@
 .eyebrow {
   font-size: 0.68rem;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
   color: var(--color-accent);
   margin-bottom: 10px;
 }
 
 .view {
+  position: relative;
+  z-index: 1;
   display: none;
   gap: 18px;
 }
@@ -161,8 +217,6 @@
   margin-bottom: 12px;
 }
 
-/* RU: Состояние свернутой боковой панели. */
-/* EN: Collapsed sidebar state. */
 .app-shell.sidebar-collapsed .brand-copy,
 .app-shell.sidebar-collapsed .profile-copy,
 .app-shell.sidebar-collapsed .mode-link span {
